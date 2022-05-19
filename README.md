@@ -7,6 +7,21 @@ Simple neovim setup with colors and lsp.
 Requires [Neovim ](https://neovim.io) v0.5 at least.
 
 ---
+# Installation
+> ⚠ Make sure than you have a backup of your nvim configuration before install.
+
+Run this command on a terminal:
+```shell
+git clone https://github.com/pauchiner/chiner.nvim ~/.config/nvim
+```
+Or [download the repository](https://github.com/pauchiner/chiner.nvim/archive/refs/heads/main.zip) and copy the folder on your config directory.
+
+# Installing the plugin manager
+
+This neovim config uses [vim-plug](https://github.com/junegunn/vim-plug) as plugin manager.
+
+
+
 
 # Plugins:
 
