@@ -8,6 +8,9 @@ Simple neovim setup with colors and lsp.
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Installing the plugin manager](#installing-the-plugin-manager)
+- [Usage](#Usage)
+  - [Keybindings](#keybindings)
+  - [Color Scheme](#colorscheme)
 - [Plugins](#plugins)
   - [nvim-lspconfig](#nvim-lspconfig)
   - [nvim-lsp-installer](#nvim-lsp-installer)
@@ -34,15 +37,17 @@ Simple neovim setup with colors and lsp.
 # Requirements
 
 - [Neovim](https://neovim.io) v0.5 at least.
+- [Prettier](https://prettier.io) (optional)
 - [Git](https://git-scm.com/)
 
 # Installation
 
-> ⚠ Make sure than you have a backup of your nvim configuration before install.
-
-Run this command on a terminal:
-
-```shell
+```bash
+# Move to .config directory
+cd ~/.config
+# Back up our current config (Recommended)
+cp -r nvim nvim.backup
+# Clone repository
 git clone https://github.com/pauchiner/chiner.nvim ~/.config/nvim
 ```
 
@@ -51,6 +56,49 @@ Or [download the repository](https://github.com/pauchiner/chiner.nvim/archive/re
 # Installing the plugin manager
 
 This neovim config uses [vim-plug](https://github.com/junegunn/vim-plug) as plugin manager.
+
+## Why doesn't work ⁉️
+By default when you run the configuration for the first time, vim-plug is autoloaded.
+If you have any problem see the [vim-plug installation guide](https://github.com/junegunn/vim-plug#installation).
+# Usage
+
+## Keybindings
+
+### Basic key binds
+
+|                 |               |
+|-----------------|---------------|
+| Leader Key      |      `;`      |
+| Escape Key      |`<leader> ;`   |
+
+### Buffers
+
+|  Function       |  keybind      |
+|-----------------|---------------|
+| Buffer Next     |`<tab>`        |
+| Buffer Previous |`<Shift> <tab>`|
+
+### Browser
+
+|  Function       |  keybind      |
+|-----------------|---------------|
+| Toggle Nerdtree | `<leader> l`  |
+
+
+To see all check [maps.vim](https://github.com/pauchiner/chiner.nvim/blob/main/maps.vim).
+
+## Color Scheme
+
+This configuration uses [One](https://github.com/joshdick/onedark.vim) color scheme.
+
+
+To change the color scheme go to [init.vim](https://github.com/pauchiner/chiner.nvim/blob/0cd9cd08eb006c615be2e9a65eb3016e3cca0724/init.vim#L142) on the line 142:
+```vim 
+colorscheme one
+```
+and change `one` with your color scheme.
+
+All color schemes are stored in the [`colors/`](https://github.com/pauchiner/chiner.nvim/tree/main/colors) directory.
 
 # Plugins
 
@@ -67,6 +115,14 @@ The neovim built-in lsp client with some plugins.
 Neovim plugin that allows you to seamlessly manage LSP servers with :LspInstall.
 
 <img width="500px" alt="lsp-installer preview" src="images/img2.png">
+
+## Installing Language support clients
+
+To see a full list of the supported Languages see [this](https://github.com/williamboman/nvim-lsp-installer/tree/main/lua/nvim-lsp-installer/servers).
+
+To install a Language server just enter this:
+`:LspInstall` followed by `<TAB>` to see all the options.
+
 
 [View on github ↩︎](https://github.com/williamboman/nvim-lsp-installer)
 
