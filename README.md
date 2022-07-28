@@ -66,10 +66,9 @@ If you have any problem see the [vim-plug installation guide](https://github.com
 
 ### Basic key binds
 
-|                 |               |
+|  Function       |  keybind      |
 |-----------------|---------------|
 | Leader Key      |      `;`      |
-| Escape Key      |`<leader> ;`   |
 
 ### Buffers
 
@@ -84,19 +83,31 @@ If you have any problem see the [vim-plug installation guide](https://github.com
 |-----------------|---------------|
 | Toggle Nerdtree | `<leader> l`  |
 
+### Windows
+
+
+|  Function             |  keybind          |
+|-----------------------|-------------------|
+| Split vertical        |    `sv`           |
+| Split horizontal      |    `ss`           |
+| Swap windows          |   `space`         |
+| Move to left window   | `sh` or `s <left>`| 
+| Move to right window  |`sl` or `s <right>`|  
+| Move to the up window |`sk` or `s <up>`   |  
+| Move to down window   |`sj` or `s <down>` |  
+
 
 To see all check [maps.vim](https://github.com/pauchiner/chiner.nvim/blob/main/maps.vim).
 
 ## Color Scheme
 
-This configuration uses [One](https://github.com/joshdick/onedark.vim) color scheme.
+This configuration uses [One Color Scheme](https://github.com/joshdick/onedark.vim).
 
-
-To change the color scheme go to [init.vim](https://github.com/pauchiner/chiner.nvim/blob/0cd9cd08eb006c615be2e9a65eb3016e3cca0724/init.vim#L142) on the line 142:
+To change the color scheme go to [init.vim on the line 142:](https://github.com/pauchiner/chiner.nvim/blob/0cd9cd08eb006c615be2e9a65eb3016e3cca0724/init.vim#L142)
 ```vim 
 colorscheme one
 ```
-and change `one` with your color scheme.
+And change `one` with your color scheme.
 
 All color schemes are stored in the [`colors/`](https://github.com/pauchiner/chiner.nvim/tree/main/colors) directory.
 
@@ -112,7 +123,7 @@ The neovim built-in lsp client with some plugins.
 
 ## [nvim-lsp-installer](https://github.com/williamboman/nvim-lsp-installer)
 
-Neovim plugin that allows you to seamlessly manage LSP servers with :LspInstall.
+Neovim plugin that allows you to seamlessly manage LSP servers 
 
 <img width="500px" alt="lsp-installer preview" src="images/img2.png">
 

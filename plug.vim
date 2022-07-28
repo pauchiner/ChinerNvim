@@ -15,7 +15,7 @@ Plug 'tpope/vim-rhubarb'
 Plug 'preservim/nerdtree'
 
 if has("nvim")
-  Plug 'edluffy/specs.nvim'
+  Plug 'vimsence/vimsence'
   Plug 'akinsho/nvim-bufferline.lua'
   Plug 'mhinz/vim-startify'
   Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}

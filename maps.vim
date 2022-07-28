@@ -2,13 +2,16 @@
 
 let mapleader = ";"
 
-" ESC key more easy
-inoremap ;; <Esc>
-
 nnoremap <S-C-p> "0p
 " Delete without yank
 nnoremap <leader>d "_d
 nnoremap x "_x
+
+" Folding
+set foldmethod=syntax
+set foldcolumn=1
+let javaScript_fold=1
+set foldlevelstart=99
 
 " Increment/decrement
 nnoremap + <C-a>
