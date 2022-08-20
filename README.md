@@ -15,27 +15,6 @@ A out-of-the-box neovim configuration for react and web technologies.
 - [Usage](#Usage)
   - [Keybindings](#keybindings)
   - [Color Scheme](#colorscheme)
-- [Plugins](#plugins)
-  - [nvim-lspconfig](#nvim-lspconfig)
-  - [nvim-lsp-installer](#nvim-lsp-installer)
-  - [lspsaga.nvim](#lspsaganvim)
-  - [lsp-colors.nvim](#lsp-colorsnvim)
-  - [lsp-kind](#lsp-kind)
-  - [vim-devicons](#vim-devicons)
-  - [vim-startify](#vim-startify)
-  - [lualine.nvim](#lualinenvim)
-  - [specs.nvim](#specsnvim)
-  - [nvim-treesitter](#nvim-treesitter)
-  - [cmp-buffer](#cmp-buffer)
-  - [nvim-cmp](#nvim-cmp)
-  - [nvim-web-devicons](#nvim-web-devicons)
-  - [nerdtree](#nerdtree)
-  - [nvim-bufferline.lua](#nvim-bufferlinelua)
-  - [vim-fugitive](#vim-fugitive)
-  - [LuaSnip](#luasnip)
-  - [vim-prettier](#vim-prettier)
-  - [nvim-ts-autotag](#nvim-ts-autotag)
-  - [vim-rhubarb](#vim-rhubarb)
 - [Credits](#credits)
 
 
@@ -89,7 +68,7 @@ Follow the [Quick Install Guide](https://github.com/wbthomason/packer.nvim#quick
 | Move to down window   |`sj` or `s <down>` |  
 
 
-To see all check [maps.vim](https://github.com/pauchiner/chiner.nvim/blob/main/maps.vim).
+To see all check [maps.lua](https://github.com/pauchiner/chiner.nvim/blob/main/lua/maps.lua).
 
 ## Color Scheme
 
