@@ -37,10 +37,6 @@ Follow the [Quick Install Guide](https://github.com/wbthomason/packer.nvim#quick
 
 ### Basic key binds
 
-|  Function       |  keybind      |
-|-----------------|---------------|
-| Leader Key      |      `;`      |
-
 ### Buffers
 
 |  Function       |  keybind      |
@@ -50,9 +46,13 @@ Follow the [Quick Install Guide](https://github.com/wbthomason/packer.nvim#quick
 
 ### Browser
 
-|  Function       |  keybind      |
-|-----------------|---------------|
-| Toggle Nerdtree | `<leader> l`  |
+|  Function            |  keybind      |
+|----------------------|---------------|
+| Toggle Nerdtree      |     `;l`      |
+| Toggle quick find    |     `;f`      |
+| Show lsp diagnostics |     `;e`      |
+| Show buffers list    |     `\\`      |
+| Command help list.   |     `;t
 
 ### Windows
 
