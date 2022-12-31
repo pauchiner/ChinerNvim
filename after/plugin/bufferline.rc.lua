@@ -12,18 +12,18 @@ bufferline.setup({
   },
   highlights = {
     indicator_selected = {
-      guifg = '#e95678',
+      fg = '#e95678',
     },
     background = {
-      guifg = '#657b83',
-      guibg = '#1e2127'
+      fg = '#657b83',
+      bg = '#1e2127'
     },
     buffer_selected = {
-      guifg = '#fdf6e3',
-      gui = "bold",
+      fg = '#fdf6e3',
+      bold = true,
     },
     fill = {
-      guibg = '#282c34'
+      bg = '#282c34'
     }
   },
 })
