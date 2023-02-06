@@ -23,8 +23,10 @@ A out-of-the-box neovim configuration for react and web technologies.
 ```bash
 # Move to .config directory
 cd ~/.config
+
 # Back up our current config (Recommended)
 cp -r nvim nvim.backup
+
 # Clone repository
 git clone https://github.com/pauchiner/chiner.nvim ~/.config/nvim
 ```
@@ -34,8 +36,6 @@ This neovim config uses [Packer](https://github.com/wbthomason/packer.nvim) as p
 Follow the [Quick Install Guide](https://github.com/wbthomason/packer.nvim#quickstart) to install it.
 
 ## Keybindings
-
-### Basic key binds
 
 ### Buffers
 
@@ -52,7 +52,7 @@ Follow the [Quick Install Guide](https://github.com/wbthomason/packer.nvim#quick
 | Toggle quick find    |     `;f`      |
 | Show lsp diagnostics |     `;e`      |
 | Show buffers list    |     `\\`      |
-| Command help list.   |     `;t
+| Command help list.   |     `;t`
 
 ### Windows
 
