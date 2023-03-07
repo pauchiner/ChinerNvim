@@ -72,7 +72,9 @@ To see all check [maps.lua](https://github.com/pauchiner/chiner.nvim/blob/main/l
 
 ## Color Scheme
 
-This configuration uses [One Color Scheme](https://github.com/joshdick/onedark.vim).
+This configuration uses [Palenight Color Scheme](https://github.com/drewtempelmeyer/palenight.vim).
+
+You can change the theme installing a new one and changing [this line](https://github.com/pauchiner/chiner.nvim/blob/2f1745f4a0bb62b4319f1f452e3c085b679dcfdb/lua/colorscheme.lua#L2).
 
 # Credits
 
