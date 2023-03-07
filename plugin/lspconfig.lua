@@ -29,7 +29,7 @@ local on_attach = function(client, bufnr)
     vim.api.nvim_create_autocmd("BufWritePre", {
       group = vim.api.nvim_create_augroup("Format", { clear = true }),
       buffer = bufnr,
-      callback = function() vim.lsp.buf.formatting_seq_sync() end
+      callback = function() vim.lsp.buf.format() end
     })
   end
 end
@@ -67,11 +67,6 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
 
-nvim_lsp.flow.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
-}
-
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
@@ -79,11 +74,7 @@ nvim_lsp.tsserver.setup {
   capabilities = capabilities
 }
 
-nvim_lsp.sourcekit.setup {
-  on_attach = on_attach,
-}
-
-nvim_lsp.sumneko_lua.setup {
+nvim_lsp.lua_ls.setup {
   on_attach = on_attach,
   settings = {
     Lua = {
