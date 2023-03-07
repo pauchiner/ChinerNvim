@@ -9,7 +9,8 @@ vim.cmd [[packadd packer.nvim]]
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
 
-  use 'navarasu/onedark.nvim' -- Color Theme
+  use 'drewtempelmeyer/palenight.vim' -- Color Theme
+  use 'startup-nvim/startup.nvim' -- Start Screen
   use 'kyazdani42/nvim-tree.lua' -- Lua NerdTree
   use 'nvim-lualine/lualine.nvim' -- Statusline
   use 'nvim-lua/plenary.nvim' -- Common utilities
@@ -35,5 +36,4 @@ packer.startup(function(use)
   use 'akinsho/nvim-bufferline.lua'
 
   use 'lewis6991/gitsigns.nvim'
-  use 'dinhhuy258/git.nvim' -- For git blame & browse
 end)
