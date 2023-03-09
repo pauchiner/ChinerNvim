@@ -4,20 +4,20 @@
 <h1 align="center">ChinerNvim</h1>
 
 <h4 align="center">
-  <a href="#-features">Features</a>
+  <a href="#-features">✨ Features </a>
   ·
-  <a href="#%EF%B8%8F-installation">Installation</a>
+  <a href="#%EF%B8%8F-installation"> 🛠️ Installation </a>
   ·
-  <a href="#-others">Others</a>
+  <a href="#-others"> ➕ Others </a>
 </h4>
 
 <p align="center">
 A out-of-the-box neovim configuration for react and web technologies.
 </p>
 
-<img width="1200px" alt="A preview of the neovim configuration" src="images/img1.png">
+<img alt="Start Screen Preview" src="images/img1.png">
 
-<img width="1200px" alt="A preview of the neovim configuration" src="images/img2.png">
+<img alt="Coding Screen Preview" src="images/img2.png">
 
 # ✨ Features
 - Language server protocol built-in
