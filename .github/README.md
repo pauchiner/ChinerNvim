@@ -4,9 +4,9 @@
 <h1 align="center">ChinerNvim</h1>
     
 <h4 align="center">
-  <a href="#-features">✨ Features </a>
+  <a href="https://pauchiner.github.io/ChinerNvim/#-features">✨ Features </a>
   ·
-  <a href="#%EF%B8%8F-installation"> 🛠️ Installation </a>
+  <a href="https://pauchiner.github.io/ChinerNvim/#%EF%B8%8F-installation"> 🛠️ Installation </a>
   ·
   <a href="https://pauchiner.github.io/ChinerNvim/documentation/keybindings"> 📄 Docs </a>
 </h4>
