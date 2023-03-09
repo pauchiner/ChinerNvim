@@ -1,56 +1,40 @@
-name: documentation
+# .github/workflows/deploy.yml
+
+name: GitHub Pages
 
 on:
-  pull_request:
-    branches:
-      - docs
   push:
     branches:
       - docs
+    paths:
+      - '.github/workflows/deploy.yml'
+      - 'website/**'
+  pull_request:
 
 jobs:
-  checks:
-    if: github.event_name != 'push'
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-      - name: Test Build
-        run: |
-          if [ -e yarn.lock ]; then
-            yarn install --frozen-lockfile
-          elif [ -e package-lock.json ]; then
-            npm ci
-          else
-            npm i
-          fi
-          npm run build
   deploy:
-    if: github.event_name != 'pull_request'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    defaults:
+      run:
+        working-directory: website
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
           node-version: '14'
-      - uses: webfactory/ssh-agent@v0.5.0
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
-          ssh-private-key: ${{ secrets.GH_PAGES_DEPLOY }}
-      - name: Release to GitHub Pages
-        env:
-          USE_SSH: true
-          GIT_USER: git
-          CURRENT_BRANCH: docs
-        run: |
-          git config --global user.email "calmgamessuport@gmail.com"
-          git config --global user.name "Pau"
-          if [ -e yarn.lock ]; then
-            yarn install --frozen-lockfile
-          elif [ -e package-lock.json ]; then
-            npm ci
-          else
-            npm i
-          fi
-          npm run deploy
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./website/build
