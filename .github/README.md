@@ -2,17 +2,17 @@
     <img src="images/logo.png" width="133", height="133">
 </div>
 <h1 align="center">ChinerNvim</h1>
-
+    
 <h4 align="center">
   <a href="#-features">✨ Features </a>
   ·
   <a href="#%EF%B8%8F-installation"> 🛠️ Installation </a>
   ·
-  <a href="#-others"> ➕ Others </a>
+  <a href="#-documentation"> 📄 Docs </a>
 </h4>
 
 <p align="center">
-A out-of-the-box neovim configuration for react and web technologies.
+A out-of-the-box neovim configuration for react and web technologies 🌐
 </p>
 
 <img alt="Start Screen Preview" src="images/img1.png">
@@ -48,7 +48,7 @@ $ git clone https://github.com/pauchiner/chiner.nvim ~/.config/nvim
 $ nvim
 ```
 
-# ➕ Others
+# 📄 Documentation
 - [⌨️ Keybindings](#%EF%B8%8F-keybindings)
   - [Buffers](#buffers)
   - [Browser](#browser)
