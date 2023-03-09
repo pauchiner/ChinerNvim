@@ -9,6 +9,7 @@ const config = {
   baseUrl: '/ChinerNvim',
   organizationName: 'pauchiner',
   projectName: 'ChinerNvim',
+  trailingSlash: false,
   deploymentBranch: 'docs',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
