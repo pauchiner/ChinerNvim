@@ -10,7 +10,7 @@ const config = {
   organizationName: 'pauchiner',
   projectName: 'ChinerNvim',
   trailingSlash: false,
-  deploymentBranch: 'docs',
+  deploymentBranch: 'gh-pages',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   presets: [
