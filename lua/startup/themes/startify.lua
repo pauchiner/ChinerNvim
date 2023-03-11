@@ -100,7 +100,7 @@ local settings = {
     credits = {
       type = "text",
       content = function()
-          local credits = "CHINER.NVIM"
+          local credits = "ChinerNvim"
           return { credits }
       end,
       align = "center",

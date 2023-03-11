@@ -7,7 +7,7 @@ lualine.setup {
     theme = 'palenight',
     section_separators = { "", "" },
     component_separators = { "│", "│" },
-    disabled_filetypes = { 'packer', 'NvimTree' }
+    disabled_filetypes = { 'packer', 'startup', 'NvimTree' }
   },
   sections = {
     lualine_a = { 'mode' },
