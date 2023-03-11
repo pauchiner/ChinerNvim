@@ -10,7 +10,7 @@ local ensure_packer = function()
   end
   return false
 end
-  
+
 if(not packer_exists) then
   ensure_packer();
 end
@@ -35,7 +35,7 @@ packer.init({
 
 packer.startup(function(use)
     use 'wbthomason/packer.nvim'
-    
+
     --Treesitter
     use {
       'nvim-treesitter/nvim-treesitter',
@@ -64,8 +64,8 @@ packer.startup(function(use)
     use 'nvim-telescope/telescope-file-browser.nvim'
     use 'windwp/nvim-autopairs'
     use 'norcalli/nvim-colorizer.lua'
-    use 'akinsho/nvim-bufferline.lua'
-    use 'lewis6991/gitsigns.nvim'
+    use 'romgrk/barbar.nvim' -- Bufferline
+    use 'lewis6991/gitsigns.nvim' -- Git integration
 
   if not packer_exists then
     packer.sync()
