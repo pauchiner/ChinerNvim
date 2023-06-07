@@ -33,5 +33,8 @@ bufferline.setup({
   },
 })
 
+-- Hides bufferline on startup
+vim.api.nvim_exec([[ autocmd FileType startup set showtabline=0 | autocmd WinLeave <buffer> set showtabline=2 ]], false)
+
 vim.keymap.set('n', '<Tab>', '<Cmd>BufferLineCycleNext<CR>', {})
 vim.keymap.set('n', '<S-Tab>', '<Cmd>BufferLineCyclePrev<CR>', {})
