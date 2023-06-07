@@ -1,5 +1,3 @@
---vim.lsp.set_log_level("debug")
-
 local status, nvim_lsp = pcall(require, "lspconfig")
 if (not status) then return end
 
@@ -43,6 +41,10 @@ nvim_lsp.tsserver.setup {
   cmd = { "typescript-language-server", "--stdio" },
   capabilities = capabilities
 }
+
+nvim_lsp.pyright.setup {}
+
+nvim_lsp.rust_analyzer.setup {}
 
 nvim_lsp.lua_ls.setup {
   settings = {
