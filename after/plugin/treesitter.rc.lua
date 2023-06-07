@@ -6,10 +6,6 @@ ts.setup {
     enable = true,
     disable = {},
   },
-  indent = {
-    enable = true,
-    disable = {},
-  },
   ensure_installed = {
     "vim",
     "markdown",
@@ -24,11 +20,9 @@ ts.setup {
     "swift",
     "css",
     "html",
+    "rust",
     "lua"
   },
-  -- autotag = {
-  --  enable = true,
-  -- },
 }
 
 local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
