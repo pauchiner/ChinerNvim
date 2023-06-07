@@ -10,7 +10,7 @@ local ensure_packer = function()
   end
   return false
 end
-  
+
 if(not packer_exists) then
   ensure_packer();
 end
@@ -35,7 +35,7 @@ packer.init({
 
 packer.startup(function(use)
     use 'wbthomason/packer.nvim'
-    
+
     --Treesitter
     use {
       'nvim-treesitter/nvim-treesitter',
@@ -60,9 +60,11 @@ packer.startup(function(use)
     use 'glepnir/lspsaga.nvim' -- LSP UIs
     use 'L3MON4D3/LuaSnip' -- Lua Snippets
     use 'kyazdani42/nvim-web-devicons' -- File icons
+    use 'christoomey/vim-tmux-navigator' -- Blends vim navigation and tmux navigation
     use 'nvim-telescope/telescope.nvim'
     use 'nvim-telescope/telescope-file-browser.nvim'
-    use 'windwp/nvim-autopairs'
+    use 'windwp/nvim-ts-autotag' -- Closes automatic html tags
+    use 'windwp/nvim-autopairs' -- Closes automatic brackets and others
     use 'norcalli/nvim-colorizer.lua'
     use 'akinsho/nvim-bufferline.lua'
     use 'lewis6991/gitsigns.nvim'
