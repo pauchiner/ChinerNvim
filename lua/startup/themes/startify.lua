@@ -130,7 +130,7 @@ local settings = {
         background = "#1f2227",
         folded_section = "#56b6c2",
     },
-    parts = { "header", "body", "clock", "credits" },
+    parts = { "header", "body"},
 }
 
 return settings
