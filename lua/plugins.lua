@@ -63,7 +63,6 @@ packer.startup(function(use)
     use 'christoomey/vim-tmux-navigator' -- Blends vim navigation and tmux navigation
     use 'nvim-telescope/telescope.nvim'
     use 'nvim-telescope/telescope-file-browser.nvim'
-    use 'windwp/nvim-ts-autotag' -- Closes automatic html tags
     use 'windwp/nvim-autopairs' -- Closes automatic brackets and others
     use 'norcalli/nvim-colorizer.lua'
     use 'akinsho/nvim-bufferline.lua'
