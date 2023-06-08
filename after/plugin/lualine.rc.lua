@@ -5,8 +5,8 @@ lualine.setup {
   options = {
     icons_enabled = true,
     theme = 'palenight',
-    section_separators = { "", "" },
-    component_separators = { "│", "│" },
+    component_separators = '|',
+    section_separators = { left = '', right = '' },
     disabled_filetypes = { 'packer', 'startup', 'NvimTree' }
   },
   sections = {
