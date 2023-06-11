@@ -1,3 +1,4 @@
+---@diagnostic disable-next-line: param-type-mismatch
 local packer_exists = pcall(vim.cmd, [[packadd packer.nvim]])
 
 local ensure_packer = function()
@@ -45,7 +46,8 @@ packer.startup(function(use)
       end,
     }
 
-    use 'drewtempelmeyer/palenight.vim' -- Color Theme
+
+    use 'navarasu/onedark.nvim' -- Color Theme
     use 'startup-nvim/startup.nvim' -- Start Screen
     use 'kyazdani42/nvim-tree.lua' -- Lua NerdTree
     use 'nvim-lualine/lualine.nvim' -- Statusline
