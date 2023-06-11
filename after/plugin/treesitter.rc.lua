@@ -11,6 +11,7 @@ ts.setup {
     "markdown",
     "markdown_inline",
     "typescript",
+    "javascript",
     "tsx",
     "toml",
     "fish",
