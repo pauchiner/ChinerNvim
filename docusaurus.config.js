@@ -56,7 +56,7 @@ const config = {
     },
     footer: {
       style: 'dark',
-      copyright: `Copyright © ${new Date().getFullYear()} ChinerNvim, Inc.`,
+      copyright: `With 💜 by Pau García Chiner`,
     },
     prism: {
       theme: lightCodeTheme,
