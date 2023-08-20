@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkChinerNvim=self.webpackChunkChinerNvim||[]).push([[967],{3769:e=>{e.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"default"}')}}]);
