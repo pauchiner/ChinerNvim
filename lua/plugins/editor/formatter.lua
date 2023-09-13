@@ -33,7 +33,11 @@ return {
     if (ChinerNvim.plugins.prettier.formatOnSave) then
       vim.api.nvim_create_autocmd({"BufWritePost"}, {
         pattern = {"*.html", "*.css", "*.json", "*.js", "*.jsx", "*.ts", "*.tsx"},
-        command = "FormatWriteLock",
+        callback = function ()
+          --- Return if the document is wrong
+          if (#vim.diagnostic.get(0, { severity = vim.diagnostic.severity.ERROR }) > 0) then return end
+          vim.cmd[[FormatWriteLock]]
+        end,
       })
     end
   end
