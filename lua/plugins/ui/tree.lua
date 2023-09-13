@@ -3,20 +3,29 @@ return {
   name = "Tree",
   cmd = "NvimTreeToggle",
   opts = {
-    diagnostics = {
-      enable = ChinerNvim.filemanager.diagnostics,
-      icons = {
-        hint = "",
-        info = "",
-        warning = "",
-        error = "",
-      }
+    view = {
+      signcolumn = "auto",
+      side = ChinerNvim.filemanager.side,
     },
 
     renderer = {
+      root_folder_label = function(path)
+        return vim.fn.fnamemodify(path, ":t")
+      end,
+      group_empty = true,
+
+      highlight_git = ChinerNvim.filemanager.git.highlights,
+      highlight_diagnostics = ChinerNvim.filemanager.diagnostics.highlights,
+
+      indent_markers = {
+        enable = ChinerNvim.filemanager.indent_markers,
+        icons = { corner = "╰", }
+      },
+
       icons = {
         show = {
-          git = ChinerNvim.filemanager.git,
+          git = ChinerNvim.filemanager.git.icons,
+          folder_arrow = true,
         },
         glyphs = {
           git = {
@@ -27,17 +36,26 @@ return {
             untracked = "",
             deleted = "",
             ignored = "◌",
+          },
+          folder = {
+            default = "",
+            open = "",
+            empty = "",
+            empty_open = ""
           }
         },
+        diagnostics_placement = "after"
       },
     },
 
-    filters = {
-      dotfiles = false,
-    },
-
-    view = {
-      side = "right",
+    diagnostics = {
+      enable = ChinerNvim.filemanager.diagnostics.icons,
+      icons = {
+        hint = "",
+        info = "",
+        warning = "",
+        error = "",
+      }
     },
   }
 }

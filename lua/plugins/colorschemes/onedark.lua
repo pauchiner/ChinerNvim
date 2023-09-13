@@ -35,6 +35,16 @@ return  {
         -- Fold Column
         ["FoldColumn"] = { fg = "$grey", bg = '$bg0'},
 
+        --- Tree ---
+        ["NvimTreeRootFolder"] = { fg = "$purple"},
+        ["NvimTreeIndentMarker"] = { fg = "$grey"},
+        ["NvimTreeFolderArrowClosed"] = { fg = "$grey"},
+        -- Folders
+        ["NvimTreeFolderName"] = { fg = "#cccccc"},
+        ["NvimTreeEmptyFolderName"] = { fg = "#cccccc"},
+        ["NvimTreeOpenedFolderName"] = { fg = "#b78fda", fmt = 'bold'},
+        ["NvimTreeFolderIcon"] = { fg = "#b78fda"},
+
         -- Lazy
         ["LazyH1"] = {fg = "$bg0", bg = "$purple"},
         ["LazyNoCond"] = {fg = "$grey"},

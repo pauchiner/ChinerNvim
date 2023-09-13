@@ -8,8 +8,18 @@ ChinerNvim = {
 
   -- File manager (Tree)
   filemanager = {
-    diagnostics = true, -- Diagnostic markers on the files
-    git = true, -- Git markers on the files
+    side = "right",      -- The side of the tree ("right" or "left")
+    indent_markers = true,  -- Indentation in the tree structure
+
+    diagnostics = {      -- Diagnostic markers on the files
+      highlights = true, -- Highlight filenames with diagnostics colors
+      icons = true,
+    },
+
+    git = {              -- Git markers on the files
+      highlights = false, -- Highlight with colors git files
+      icons = true,
+    }
   },
 
   -- Builtin diagnostics
