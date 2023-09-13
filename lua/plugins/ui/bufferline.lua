@@ -25,9 +25,14 @@ return {
         fg = '#657b83',
         bg = '#2a2c3d'
       },
+      buffer_visible = {
+        bg = '#2a2c3d'
+      },
       buffer_selected = {
-        fg = '#fdf6e3',
-        bold = true,
+        fg = '#b78fda',
+        bg = '#2a2c3d',
+        italic = false,
+        bold = false,
       },
       duplicate = {
         bg = '#2a2c3d'
@@ -65,12 +70,15 @@ return {
         bg = "#2a2c3d"
       },
       modified = {
+        fg = '#b78fda',
         bg = "#2a2c3d"
       },
       modified_visible = {
+        fg = '#b78fda',
         bg = "#2a2c3d"
       },
       modified_selected = {
+        fg = '#b78fda',
         bg = "#2a2c3d"
       },
       fill = {
