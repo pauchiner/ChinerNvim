@@ -61,3 +61,10 @@ end
 -- hide default statusline and ruler in dashboard
 vim.cmd([[autocmd FileType alpha set laststatus=0]])
 vim.cmd([[autocmd FileType alpha set noruler]])
+
+--- Change the cmdheight if tmux is open
+vim.cmd([[ 
+  if exists('$TMUX')
+    set cmdheight=1
+  endif
+]])
