@@ -1,4 +1,5 @@
 .DS_Store
 .docusaurus
+lazy-lock.json
 node_modules
 build
