@@ -25,7 +25,7 @@ return {
 
     -- Gutter
     local signs = ChinerNvim.lsp.gutter
-      and { Error = " ", Warn = " ", Hint = " ", Info = " " }
+      and { Error = " ", Warn = " ", Hint = "󰌶 ", Info = " " }
       or { Error = "", Warn = "", Hint = "", Info = "" }
 
     for type, icon in pairs(signs) do

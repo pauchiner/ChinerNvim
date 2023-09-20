@@ -38,13 +38,14 @@ return {
             ignored = "◌",
           },
           folder = {
-            default = "",
-            open = "",
-            empty = "",
-            empty_open = ""
+            default = " ",
+            open = " ",
+            empty = " ",
+            empty_open = " "
           }
         },
-        diagnostics_placement = "after"
+        diagnostics_placement = "before",
+        git_placement = "after",
       },
     },
 
