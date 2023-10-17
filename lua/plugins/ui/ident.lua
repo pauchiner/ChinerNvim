@@ -3,5 +3,7 @@ return {
   name = "Identline",
   event = { "BufReadPost", "BufNewFile" },
   cond = ChinerNvim.plugins.identation.lines,
-  opts = {}
+  config = function ()
+    require("ibl").setup();
+  end
 }
