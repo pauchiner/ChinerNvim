@@ -33,7 +33,7 @@ ChinerNvim = {
 
     --- Identation like VS Code
     identation = {
-      lines = true,        --- Displays identation lines in the code (indent_blankline.nvim)
+      lines = false,        --- Displays identation lines in the code (indent_blankline.nvim)
       folding = true,      --- Modern folding with markers in the gutter and mouse support (nvim-ufo)
     },
 
@@ -45,7 +45,7 @@ ChinerNvim = {
 
     --- Allows to use Ctrl-jkhl to move between neovim and tmux
     tmux_navigation = {
-      enabled = false,
+      enabled = true,
     },
 
     --- Git symbols in the UI
@@ -59,6 +59,11 @@ ChinerNvim = {
 
     --- Integrate lazygit in the editor, run :Lz or :LazyGit
     lazygit = {
+      enabled = true
+    },
+
+    --- Github Copilot
+    copilot = {
       enabled = true
     },
 
