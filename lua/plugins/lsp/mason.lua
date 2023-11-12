@@ -46,6 +46,7 @@ return {
     mason_tool_installer.setup {
       ensure_installed = {
         "lua_ls",
+        "astro",
         "tsserver",
         "eslint",
         "cssls",
@@ -66,6 +67,13 @@ return {
       -- Typescript
       ["tsserver"] = function ()
         lspconfig.tsserver.setup {
+          capabilities = capabilities
+        }
+      end,
+
+      -- Astro
+      ["astro"] = function ()
+        lspconfig.astro.setup {
           capabilities = capabilities
         }
       end,
