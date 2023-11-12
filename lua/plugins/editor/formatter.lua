@@ -2,15 +2,18 @@ return {
   'mhartington/formatter.nvim',
   name = "Formatter",
   cond = ChinerNvim.plugins.prettier.enabled,
-  event = "BufEnter *.html,*.css,*.json,*.js,*.jsx,*.ts,*.tsx",
+  event = "BufEnter *.html,*.css,*.json,*.js,*.jsx,*.ts,*.tsx,*.astro",
   config =  function ()
     require("formatter").setup {
       filetype = {
-        html = {
+        astro = {
           require("formatter.filetypes.html").prettier,
         },
         css = {
           require("formatter.filetypes.css").prettier,
+        },
+        html = {
+          require("formatter.filetypes.html").prettier,
         },
         json = {
           require("formatter.filetypes.json").prettier,
@@ -32,7 +35,7 @@ return {
 
     if (ChinerNvim.plugins.prettier.formatOnSave) then
       vim.api.nvim_create_autocmd({"BufWritePost"}, {
-        pattern = {"*.html", "*.css", "*.json", "*.js", "*.jsx", "*.ts", "*.tsx"},
+        pattern = {"*.html", "*.css", "*.json", "*.js", "*.jsx", "*.ts", "*.tsx", "*.astro"},
         callback = function ()
           --- Return if the document is wrong
           if (#vim.diagnostic.get(0, { severity = vim.diagnostic.severity.ERROR }) > 0) then return end
