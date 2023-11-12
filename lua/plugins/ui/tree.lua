@@ -38,10 +38,10 @@ return {
             ignored = "◌",
           },
           folder = {
-            default = " ",
-            open = " ",
-            empty = " ",
-            empty_open = " "
+            default = "󰉋 ",
+            open = "󰝰 ",
+            empty = "󰉖 ",
+            empty_open = "󰷏 "
           }
         },
         diagnostics_placement = "before",
