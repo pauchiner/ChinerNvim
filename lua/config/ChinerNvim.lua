@@ -64,7 +64,7 @@ ChinerNvim = {
 
     --- Github Copilot
     copilot = {
-      enabled = true
+      enabled = false
     },
 
     --- EXPERIMENTAL FEATURES ---

@@ -3,6 +3,7 @@ return {
   name = "Copilot",
   cmd = "Copilot",
   event = "InsertEnter",
+  cond = ChinerNvim.plugins.copilot.enabled,
   config = function()
     require("copilot").setup({
       panel = {
