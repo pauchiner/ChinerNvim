@@ -4,12 +4,12 @@ return {
   main = "nvim-web-devicons",
   opts = {
     override_by_filename = {
-      [".prettierrc.mjs"] = {
+      [".prettierrc.cjs"] = {
         icon = "󰉨",
         color = "#ff5454",
         name = "prettier"
       },
-      [".eslintrc.mjs"] = {
+      [".eslintrc.cjs"] = {
         icon = "󰱺",
         color = "#5b34eb",
         name = "eslint"
