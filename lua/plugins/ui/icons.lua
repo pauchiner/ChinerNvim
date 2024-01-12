@@ -9,7 +9,17 @@ return {
         color = "#ff5454",
         name = "prettier"
       },
+      [".prettierrc.json"] = {
+        icon = "󰉨",
+        color = "#ff5454",
+        name = "prettier"
+      },
       [".eslintrc.cjs"] = {
+        icon = "󰱺",
+        color = "#5b34eb",
+        name = "eslint"
+      },
+      [".eslintrc.json"] = {
         icon = "󰱺",
         color = "#5b34eb",
         name = "eslint"
