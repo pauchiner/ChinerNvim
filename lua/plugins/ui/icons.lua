@@ -39,11 +39,6 @@ return {
         color = "#2c8ebb",
         name = "yarn"
       },
-      ["env.d.ts"] = {
-        icon = "",
-        color = "#48A049",
-        name = "typescript"
-      },
     },
     override_by_extension = {
       ["d.ts"] = {
