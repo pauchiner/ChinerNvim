@@ -8,3 +8,18 @@ const {title = 'ChinerNvim'} = Astro.props;
   <meta name="viewport" content="width=device-width" />
   <title>{title}</title>
 </head>
+
+<script is:inline>
+  const theme = (() => {
+    if (localStorage.getItem('theme') !== null)
+      return localStorage.getItem('theme');
+
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches)
+      return 'dark';
+
+    return 'light';
+  })();
+
+  if (theme === 'light') document.documentElement.classList.remove('dark');
+  else document.documentElement.classList.add('dark');
+</script>
