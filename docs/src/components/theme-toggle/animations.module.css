@@ -1,0 +1,25 @@
+.active {
+  svg {
+    transition: scale 150ms ease-out;
+  }
+}
+
+.active:active {
+  & svg {
+    scale: 0.9;
+  }
+}
+
+.enter {
+  opacity: 0;
+  animation: enter 150ms ease-out forwards;
+}
+
+@keyframes enter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
