@@ -1,0 +1,14 @@
+---
+import Head from './BaseHead.astro';
+import Body from './BaseBody.astro';
+import '../styles/globals.css';
+
+const {title = 'ChinerNvim'} = Astro.props;
+---
+
+<html lang="en" class="dark">
+  <Head title={title} />
+  <Body>
+    <slot />
+  </Body>
+</html>
