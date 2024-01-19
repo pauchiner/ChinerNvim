@@ -8,6 +8,9 @@ export default {
         mono: 'JetBrains Mono'
       }
     },
+    container: {
+      center: true
+    },
   },
   plugins: [],
 };
