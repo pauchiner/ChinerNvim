@@ -1,9 +1,11 @@
 ---
 import Header from 'components/Header.astro';
+import Footer from 'components/Footer.astro';
 ---
 
 <body
-  class="bg-green-50 dark:bg-zinc-950 text-zinc-900 dark:text-lime-100 break-words leading-6 transition-colors duration-300">
+  class="break-words bg-green-50 leading-6 text-zinc-900 transition-colors duration-300 dark:bg-zinc-950 dark:text-lime-100">
   <Header />
   <slot />
+  <Footer />
 </body>
