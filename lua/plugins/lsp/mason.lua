@@ -45,16 +45,16 @@ return {
       ensure_installed = {
         --- Lsp's
         "astro",
+        "cssls",
         "lua_ls",
         "tsserver",
 
         --- Linters
         "eslint_d",
-        "stylelint",
 
         --- Formatters
-        "prettier",
         "stylua",
+        "prettier",
       },
     }
 
