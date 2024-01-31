@@ -39,8 +39,8 @@ ChinerNvim = {
 
     --- Format code with prettier, run :Format or set formatOnSave to true.
     prettier = {
-      enabled = true,
-      formatOnSave = true,
+      enabled = false,
+      formatOnSave = false,
     },
 
     --- Allows to use Ctrl-jkhl to move between neovim and tmux
