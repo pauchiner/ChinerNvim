@@ -41,17 +41,15 @@ return {
         ChinerNvim.plugins.prettier.formatOnSave = not formatOnSave
 
         if not formatOnSave then
-          vim.api.nvim_echo(
-            { {"  ", "DoneMsg"}, {"Format On Save Enabled", "ContentMsg"}, },
-            false,
-            {}
-          )
+          vim.notify("Format On Save Enabled", "info", {
+            title = "Editor",
+            icon = ""
+          })
         else
-          vim.api.nvim_echo(
-            { {"  ", "ErrorMsg"}, {"FormatOnSave Disabled", "ContentMsg"}, },
-            false,
-            {}
-          )
+          vim.notify("Format On Save Disabled", "error", {
+            title = "Editor",
+            icon = ""
+          })
         end
       end, {})
     end
