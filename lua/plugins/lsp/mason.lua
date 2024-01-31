@@ -27,14 +27,12 @@ return {
     local cmp_lsp_status, cmp_lsp = pcall(require, 'cmp_nvim_lsp')
     if (not cmp_lsp_status) then return end
 
-    local capabilities = cmp_lsp.default_capabilities(
-      vim.lsp.protocol.make_client_capabilities()
-    )
+    cmp_lsp.default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
     mason.setup({
       ui = {
-        border = "rounded",
-        height = 0.8,
+        width = 1,
+        height = 1,
         icons = {
           package_installed = "󰸞",
           package_pending = "➜",
@@ -45,45 +43,29 @@ return {
 
     mason_tool_installer.setup {
       ensure_installed = {
-        "lua_ls",
+        --- Lsp's
         "astro",
+        "lua_ls",
         "tsserver",
-        "eslint",
-        "cssls",
-        "cspell",
-        "prettier"
+
+        --- Linters
+        "eslint_d",
+        "stylelint",
+
+        --- Formatters
+        "prettier",
+        "stylua",
       },
     }
 
-    -- Handlers
     mason_lspconfig.setup_handlers {
-      -- DEFAULT HANDLER
+
+      --- DEFAULT HANDLER ---
       function (server_name)
           lspconfig[server_name].setup {}
       end,
 
-      -- CUSTOM HANDLERS
-
-      -- Typescript
-      ["tsserver"] = function ()
-        lspconfig.tsserver.setup {
-          capabilities = capabilities
-        }
-      end,
-
-      -- Astro
-      ["astro"] = function ()
-        lspconfig.astro.setup {
-          capabilities = capabilities
-        }
-      end,
-
-      -- Css
-      ['cssls'] = function ()
-         lspconfig.cssls.setup {
-          capabilities = capabilities
-        }
-      end,
+      --- CUSTOM HANDLERS ---
 
       -- Lua
       ["lua_ls"] = function ()
@@ -101,9 +83,11 @@ return {
 
     -- Custom command to install mason and it's tools
     vim.api.nvim_create_user_command('MasonInstallation', function ()
-      print("Installing all the servers, linters and formatters...")
-      vim.cmd([[Mason]])
-      vim.cmd([[MasonToolsInstall]])
+      vim.notify("Installing all the servers, linters and formatters...", "info", {
+        title = "Mason"
+      })
+      vim.api.nvim_command [[Mason]]
+      vim.api.nvim_command [[MasonToolsInstall]]
     end, {})
   end
 }

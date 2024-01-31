@@ -68,6 +68,7 @@ return  {
         ["LazySpecial"] = {fg = "$purple"},
 
         --- Mason ---
+        ["MasonNormal"] = {bg = "$bg0"},
         ["MasonHeader"] = {fg = "$bg0", bg = "$purple"},
         ["MasonHighlight"] = {fg = "$purple"},
         ["MasonHighlightBlockBold"] = {fg = "$bg0", bg = "$purple"},
