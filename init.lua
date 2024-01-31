@@ -1,6 +1,4 @@
-require('config.ChinerNvim');
-
-require('config.options')
-require('config.lazy')
-
-require('config.keymappings')
+require('core.ChinerNvim');
+require('core.mappings')
+require('core.options')
+require('core.lazy')
