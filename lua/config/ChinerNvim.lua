@@ -37,7 +37,7 @@ ChinerNvim = {
       folding = true,      --- Modern folding with markers in the gutter and mouse support (nvim-ufo)
     },
 
-    --- Format code with prettier, run :Format or set formatOnSave to true.
+    --- Format code with prettier, run :Format or :Prettier
     prettier = {
       enabled = true,
       formatOnSave = true, --- You can also toggle this with :FormatOnSave
