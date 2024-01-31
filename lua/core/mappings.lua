@@ -9,6 +9,9 @@ keymap('n', '-', '<C-x>', silent)
 --- Delete a word backwards
 keymap('n', 'dw', 'vb"_d', silent)
 
+--- Clear highlights
+keymap('n', '<Esc>', '<cmd>noh<CR>', silent)
+
 --- Split window
 keymap('n', 'ss', ':split<Return><C-w>w', silent)
 keymap('n', 'sv', ':vsplit<Return><C-w>w', silent)
@@ -30,8 +33,9 @@ keymap('n', '<C-w><down>', '<C-w>-', silent)
 keymap('n', ';l', "<cmd> NvimTreeToggle<CR>", silent)
 
 --- Bufferline
-keymap('n', '<Tab>', function () require('bufferline').cycle(1) end, silent)
 keymap('n', '<S-Tab>', function () require('bufferline').cycle(-1) end, silent)
+keymap('n', '<Tab>', function () require('bufferline').cycle(1) end, silent)
+keymap('n', ';x', "<cmd>bd<CR>", silent)
 
 --- Lsp Saga
 keymap('n', 'K', function () require('lspsaga.hover'):render_hover_doc() end, silent)
