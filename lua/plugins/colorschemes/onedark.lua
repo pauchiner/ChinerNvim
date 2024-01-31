@@ -30,6 +30,8 @@ return  {
 
         -- Messages
         ["InfoMsg"] = {fg = "$blue", fmt = "bold"},
+        ["DoneMsg"] = {fg = "$green", fmt = "bold"},
+        ["ErrorMsg"] = {fg = "$red", fmt = "bold"},
         ["ContentMsg"] = {fg = "$fg", fmt = "italic"},
 
         -- Fold Column
