@@ -29,6 +29,15 @@ return  {
         ["@tag.delimiter"] = {fg = '$purple'},
         ["@constructor"] = {fg = '$yellow', fmt = 'italic'},
 
+        --- Lsp Saga ---
+        ["DiagnosticNormal"] = {fg ="$fg", bg = "$bg0"},
+        ["HoverNormal"] = {fg ="$fg", bg = "$bg0"},
+        ["HoverBorder"] = {fg ="$purple", bg = "$bg0"},
+        ["RenameNormal"] = {fg ="$fg", bg = "$bg0"},
+        ["RenameBorder"] = {fg ="$purple", bg = "$bg0"},
+        ["SagaNormal"] = {fg ="$fg", bg = "$bg0"},
+        ["SagaBorder"] = {fg ="$purple", bg = "$bg0"},
+
         --- Messages ---
         ["InfoMsg"] = {fg = "$blue", fmt = "bold"},
         ["DoneMsg"] = {fg = "$green", fmt = "bold"},

@@ -11,8 +11,16 @@ return {
     lightbulb = {
       enable = false,
     },
+    code_action = {
+      show_server_name = true,
+      extend_gitsigns = true
+    },
+    finder = {
+      default = "def+imp+ref",
+    },
     ui = {
-      border = "rounded"
+      border = "rounded",
+      title = false
     }
   }
 }
