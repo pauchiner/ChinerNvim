@@ -11,6 +11,8 @@ return {
   config = function()
     require("nvim-treesitter.configs").setup {
       ensure_installed = {
+        "bash",
+        "regex",
         "tsx",
         "typescript",
         "javascript",
@@ -20,13 +22,12 @@ return {
         "astro",
         "svelte",
         "gitcommit",
-        "graphql",
         "json",
-        "json5",
         "lua",
         "markdown",
         "markdown_inline",
         "vim",
+        "vimdoc",
       },
       sync_install = false,
       highlight = {
