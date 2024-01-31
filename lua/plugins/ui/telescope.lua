@@ -30,6 +30,7 @@ return {
           'node_modules',
           'deno%.lock',
           '%.git/.*',
+          '%.glb',
           '%.svg',
           '%.png',
           '%.jpeg',

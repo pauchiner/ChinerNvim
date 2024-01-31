@@ -1,9 +1,16 @@
 local logo = [[
+
+
+
+
+
+
                    .,
            /\___/\ ((
            \`@_@'/  ))
            {_:Y:.}_//
 ----------{_}^-'{_}----------
+
 ]]
 
 return {
@@ -29,6 +36,7 @@ return {
   config = function(_, dashboard)
     require("alpha").setup(dashboard.opts)
 
+--[[
     vim.api.nvim_create_autocmd("User", {
       callback = function()
         local stats = require("lazy").stats()
@@ -37,5 +45,6 @@ return {
         pcall(vim.cmd.AlphaRedraw)
       end,
     })
+]] 
   end,
 }

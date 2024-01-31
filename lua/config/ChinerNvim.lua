@@ -45,7 +45,7 @@ ChinerNvim = {
 
     --- Allows to use Ctrl-jkhl to move between neovim and tmux
     tmux_navigation = {
-      enabled = true,
+      enabled = 'auto', --- 'on', 'off' or 'auto'
     },
 
     --- Git symbols in the UI

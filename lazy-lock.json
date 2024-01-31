@@ -10,7 +10,6 @@
   "Colorizer": { "branch": "master", "commit": "85855b38011114929f4058efc97af1059ab3e41d" },
   "Colorscheme": { "branch": "master", "commit": "1230aaf2a427b2c5b73aba6e4a9a5881d3e69429" },
   "Dressing": { "branch": "master", "commit": "6f212262061a2120e42da0d1e87326e8a41c0478" },
-  "Formatter": { "branch": "main", "commit": "912f81829e9ab4ee3d54c3ea5a304c264f0003bc" },
   "Gitsigns": { "branch": "main", "commit": "2c2463dbd82eddd7dbab881c3a62cfbfbe3c67ae" },
   "Icons": { "branch": "master", "commit": "aaec87dbdaa776bfa0a13c8694bec9bcb7454719" },
   "LazyGit": { "branch": "main", "commit": "1e08e3f5ac1152339690140e61a4a32b3bdc7de5" },
