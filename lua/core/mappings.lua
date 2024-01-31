@@ -9,12 +9,6 @@ keymap('n', '-', '<C-x>', silent)
 --- Delete a word backwards
 keymap('n', 'dw', 'vb"_d', silent)
 
---- Select all
-keymap('n', '<C-a>', 'gg<S-v>G', silent)
-
---- New tab
-keymap('n', 'te', ':tabedit', silent)
-
 --- Split window
 keymap('n', 'ss', ':split<Return><C-w>w', silent)
 keymap('n', 'sv', ':vsplit<Return><C-w>w', silent)
@@ -48,7 +42,7 @@ keymap("n", "gd", "<Cmd>Lspsaga finder<CR>", saga)
 keymap("n", "gr", "<Cmd>Lspsaga rename<CR>", saga)
 
 --- Telescope
-keymap("n", "\\\\", "<cmd>Telescope buffers prompt_prefix=<CR>", silent)
-keymap("n", "<leader>r", "<cmd>Telescope live_grep prompt_prefix=<CR>", silent)
-keymap("n", "<leader>f", "<cmd>Telescope find_files prompt_prefix=<CR>", silent)
-keymap("n", "<leader>e", "<cmd>Telescope diagnostics prompt_prefix=<CR>", silent)
+keymap("n", "\\\\", "<cmd>Telescope buffers<CR>", silent)
+keymap("n", ";r", "<cmd>Telescope live_grep<CR>", silent)
+keymap("n", ";f", "<cmd>Telescope find_files<CR>", silent)
+keymap("n", ";e", "<cmd>Telescope diagnostics<CR>", silent)
