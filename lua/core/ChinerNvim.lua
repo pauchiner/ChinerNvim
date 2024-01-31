@@ -33,7 +33,7 @@ ChinerNvim = {
 
     --- Identation like VS Code
     identation = {
-      lines = false,        --- Displays identation lines in the code (indent_blankline.nvim)
+      lines = true,        --- Displays identation lines in the code (indent_blankline.nvim)
       folding = true,      --- Modern folding with markers in the gutter and mouse support (nvim-ufo)
     },
 
@@ -67,20 +67,12 @@ ChinerNvim = {
       enabled = false
     },
 
-    --- EXPERIMENTAL FEATURES ---
-
     --- Allow to preview in realtime a mardown file
     markdown_preview = {
       enabled = true,
       config = {
-        mode = "dark"       --- "dark" or "light"
+        mode = "dark"         --- "dark" or "light"
       }
-    },
-
-    --- [ CONTAINS BUGS ]
-    --- Checks the spelling on the code (only english)
-    spellchecker = {
-      enabled = false
     },
 	},
 }
