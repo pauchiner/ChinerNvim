@@ -24,41 +24,56 @@ return  {
         grey = "#545454",
       },
       highlights = {
+        --- Code ---
         ["@tag.attribute"] = {fg = '$orange', fmt = 'italic'},
         ["@tag.delimiter"] = {fg = '$purple'},
         ["@constructor"] = {fg = '$yellow', fmt = 'italic'},
 
-        -- Messages
+        --- Messages ---
         ["InfoMsg"] = {fg = "$blue", fmt = "bold"},
         ["DoneMsg"] = {fg = "$green", fmt = "bold"},
         ["ErrorMsg"] = {fg = "$red", fmt = "bold"},
         ["ContentMsg"] = {fg = "$fg", fmt = "italic"},
 
-        -- Fold Column
+        --- Fold Column ---
         ["FoldColumn"] = { fg = "$grey", bg = '$bg0'},
 
         --- Tree ---
         ["NvimTreeRootFolder"] = { fg = "$purple"},
         ["NvimTreeIndentMarker"] = { fg = "$grey"},
         ["NvimTreeFolderArrowClosed"] = { fg = "$grey"},
-        -- Folders
+
+        --- Folders ---
         ["NvimTreeFolderName"] = { fg = "#cccccc"},
         ["NvimTreeEmptyFolderName"] = { fg = "#cccccc"},
         ["NvimTreeOpenedFolderName"] = { fg = "#b78fda", fmt = 'bold'},
         ["NvimTreeFolderIcon"] = { fg = "#b78fda"},
 
-        -- Lazy
+        --- Cmp ---
+        ["CmpItemAbbrDeprecated"] = { bg="NONE", fg= "#808080", fmt="strikethrough" },
+        ["CmpItemAbbrMatch"] = { bg="NONE", fg='$purple' },
+        ["CmpItemAbbrMatchFuzzy"] = { bg="NONE", fg="$fg"},
+        ["CmpItemKindVariable"] = { bg="NONE", fg='$cyan' },
+        ["CmpItemKindInterface"] = { bg="NONE", fg='$cyan' },
+        ["CmpItemKindText"] = { bg="NONE", fg='$cyan' },
+        ["CmpItemKindFunction"] = { bg='NONE', fg='$purple' },
+        ["CmpItemKindMethod"] = { bg='NONE', fg='$purple' },
+        ["CmpItemKindKeyword"] = { bg='NONE', fg='#D4D4D4' },
+        ["CmpItemKindProperty"] = { bg='NONE', fg='#D4D4D4' },
+        ["CmpItemKindUnit"] = { bg='NONE', fg='#D4D4D4' },
+
+        --- Lazy ---
         ["LazyH1"] = {fg = "$bg0", bg = "$purple"},
         ["LazyNoCond"] = {fg = "$grey"},
         ["LazySpecial"] = {fg = "$purple"},
 
-        -- Mason
+        --- Mason ---
         ["MasonHeader"] = {fg = "$bg0", bg = "$purple"},
         ["MasonHighlight"] = {fg = "$purple"},
         ["MasonHighlightBlockBold"] = {fg = "$bg0", bg = "$purple"},
         ["MasonHighlightBlock"] = {fg = "$purple", bg = "$purple"},
 
-        -- Package Info
+        --- Package Info ---
         ["PackageInfoOutdatedVersion"] = {fg = '$grey', fmt = 'italic'},
 
       }
