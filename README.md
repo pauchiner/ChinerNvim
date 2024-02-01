@@ -1,5 +1,5 @@
 <div align="center" >
-    <img src="images/logo.png" width="133", height="133">
+    <img src=".github/images/logo.png" width="133", height="133">
 </div>
 <h1 align="center">ChinerNvim</h1>
     
