@@ -2,8 +2,8 @@ return {
   {
     'nvimtools/none-ls.nvim',
     name = 'Formatter',
-    cond = ChinerNvim.plugins.prettier.enabled,
-    event = "BufEnter *.html,*.css,*.json,*.js,*.jsx,*.ts,*.tsx,*.astro",
+    cond = ChinerNvim.editor.formatter.enabled,
+    event = "BufEnter",
     config = function ()
       local null_ls = require('null-ls');
 
@@ -21,7 +21,7 @@ return {
               buffer = bufnr,
               group = group,
               callback = function()
-                if not ChinerNvim.plugins.prettier.formatOnSave then return end
+                if not ChinerNvim.editor.formatter.formatOnSave then return end
 
                 vim.lsp.buf.format({ bufnr = bufnr, async = async })
               end,
@@ -37,8 +37,8 @@ return {
       end, {})
 
       vim.api.nvim_create_user_command('FormatOnSave', function ()
-        local formatOnSave = ChinerNvim.plugins.prettier.formatOnSave
-        ChinerNvim.plugins.prettier.formatOnSave = not formatOnSave
+        local formatOnSave = ChinerNvim.editor.formatter.formatOnSave
+        ChinerNvim.editor.formatter.formatOnSave = not formatOnSave
 
         if not formatOnSave then
           vim.notify("Format On Save Enabled", "info", {

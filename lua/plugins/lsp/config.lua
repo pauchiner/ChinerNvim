@@ -19,12 +19,12 @@ return {
         underline = true,
         severity_sort = true,
         update_in_insert = false,
-        virtual_text = ChinerNvim.lsp.virtual_text and { spacing = 2, prefix = "" } or false,
+        virtual_text = ChinerNvim.editor.diagnostics.virtual_text and { spacing = 2, prefix = "" } or false,
       }
     )
 
     -- Gutter
-    local signs = ChinerNvim.lsp.gutter
+    local signs = ChinerNvim.editor.diagnostics.gutter
       and { Error = " ", Warn = " ", Hint = "󰌶 ", Info = " " }
       or { Error = "", Warn = "", Hint = "", Info = "" }
 

@@ -7,7 +7,6 @@ return {
     build = "cd app && yarn install",
     config = function ()
       local opts = {
-        mkdp_theme = ChinerNvim.plugins.markdown_preview.config.mode,
         mkdp_page_title = "${name}"
       }
 
@@ -19,16 +18,11 @@ return {
       vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
         pattern = "*.md",
         callback = function ()
-          local markdown = function ()
-            vim.api.nvim_echo(
-              { {"  ", "InfoMsg"}, {"run :MarkdownPreview to start the live preview of the file.", "ContentMsg"}, },
-              false,
-              {}
-            )
-          end
-
-          local timer = vim.loop.new_timer()
-          timer:start(500, 0, vim.schedule_wrap(markdown))
+          vim.notify("run :MarkdownPreview to start the live preview of the file.", "info", {
+            title = "Markdown",
+            timeout = 300,
+            icon = ""
+          })
         end
       })
     end

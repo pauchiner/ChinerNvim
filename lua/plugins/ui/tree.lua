@@ -1,11 +1,11 @@
 return {
   "nvim-tree/nvim-tree.lua",
-  name = "Tree",
+  name = "File Explorer",
   cmd = "NvimTreeToggle",
   opts = {
     view = {
       signcolumn = "auto",
-      side = ChinerNvim.filemanager.side,
+      side = ChinerNvim.editor.file_explorer.side,
     },
 
     renderer = {
@@ -14,17 +14,17 @@ return {
       end,
       group_empty = true,
 
-      highlight_git = ChinerNvim.filemanager.git.highlights,
-      highlight_diagnostics = ChinerNvim.filemanager.diagnostics.highlights,
+      highlight_git = ChinerNvim.editor.file_explorer.git.highlights,
+      highlight_diagnostics = ChinerNvim.editor.file_explorer.diagnostics.highlights,
 
       indent_markers = {
-        enable = ChinerNvim.filemanager.indent_markers,
+        enable = ChinerNvim.editor.file_explorer.indent_markers,
         icons = { corner = "╰", }
       },
 
       icons = {
         show = {
-          git = ChinerNvim.filemanager.git.icons,
+          git = ChinerNvim.editor.file_explorer.git.icons,
           folder_arrow = true,
         },
         glyphs = {
@@ -50,7 +50,7 @@ return {
     },
 
     diagnostics = {
-      enable = ChinerNvim.filemanager.diagnostics.icons,
+      enable = ChinerNvim.editor.file_explorer.diagnostics.icons,
       icons = {
         hint = "",
         info = "",

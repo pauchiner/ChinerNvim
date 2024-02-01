@@ -1,8 +1,8 @@
 return {
   "lukas-reineke/indent-blankline.nvim",
-  name = "Indentline",
+  name = "Indentation",
   event = { "BufReadPost", "BufNewFile" },
-  cond = ChinerNvim.plugins.identation.lines,
+  cond = ChinerNvim.editor.identation.lines,
   config = function ()
     require("ibl").setup {
       indent = {

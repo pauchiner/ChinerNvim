@@ -6,14 +6,14 @@ local package_status = function ()
 end
 
 return {
-  "nvim-lualine/lualine.nvim",
+  "pauchiner/lualine.nvim",
   name = "Statusline",
   main = "lualine",
   event = { "BufReadPre", "BufNewFile" },
   opts = {
     options = {
       icons_enabled = true,
-      theme = ChinerNvim.statusline.colorscheme,
+      theme = "palenight",
       component_separators = '|',
       section_separators = { left = '', right = '' },
       globalstatus = true,

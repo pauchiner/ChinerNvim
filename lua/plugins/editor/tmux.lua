@@ -1,5 +1,5 @@
 local function cond ()
-  local condition = ChinerNvim.plugins.tmux_navigation.enabled
+  local condition = ChinerNvim.plugins.tmux.enabled
 
   --- Checks if nvim is running in a tmux session
   if condition == 'auto' and os.getenv("TMUX") ~= nil then return true end

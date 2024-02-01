@@ -5,7 +5,7 @@ return {
   event = 'LspAttach',
   opts = {
     symbol_in_winbar = {
-      enable = ChinerNvim.lsp.breadcrumb,
+      enable = ChinerNvim.editor.diagnostics.breadcrumb,
       show_file = false
     },
     lightbulb = {

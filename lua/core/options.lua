@@ -1,3 +1,7 @@
+local globals = {
+  mapleader = ';',        --- Map leader key to ;
+}
+
 local options = {
   autoindent     = true,                    --- Good auto indent
   backspace      = "indent,eol,start",      --- Making sure backspace works
@@ -42,12 +46,6 @@ local options = {
   wildignore     = "*node_modules/**",      --- Don't search inside Node.js modules
   wrap           = false,                   --- Display long lines as just one line
   writebackup    = false,                   --- Not needed
-  --- Displays correct folding markers
-  statuscolumn   = [[%s%=%l %#FoldColumn#%{foldlevel(v:lnum) > foldlevel(v:lnum - 1)? foldclosed(v:lnum) == -1? "": "": foldlevel(v:lnum) == 0? " ": " "} ]],
-}
-
-local globals = {
-  mapleader = ';',        --- Map leader key to ;
 }
 
 for k, v in pairs(options) do
