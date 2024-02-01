@@ -15,9 +15,9 @@
 A out-of-the-box neovim configuration for react and web technologies 🌐
 </p>
 
-<img alt="Start Screen Preview" src="images/img1.png">
+<img alt="Start Screen Preview" src=".github/images/img1.png">
 
-<img alt="Coding Screen Preview" src="images/img2.png">
+<img alt="Coding Screen Preview" src=".github/images/img2.png">
 
 # ✨ Features
 - Language server protocol built-in
@@ -55,9 +55,3 @@ All contributions are welcome:
 [CONTRIBUTING.md](https://github.com/pauchiner/ChinerNvim/blob/main/.github/CONTRIBUTING.md)
 
 [CODE_OF_CONDUCT.md](https://github.com/pauchiner/ChinerNvim/blob/main/.github/CODE_OF_CONDUCT.md)
-
-# Credits
-
-<img style="border-radius: 50%" width='90px' src="https://avatars.githubusercontent.com/u/1332805?v=4">
-
-This vim workflow is forked from [craftzdog](https://github.com/craftzdog/dotfiles-public) dotfiles. Thanks! 🙏
