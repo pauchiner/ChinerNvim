@@ -4,13 +4,8 @@ on:
   - pull_request
 jobs:
   tests:
-    if: always()
-    name: 🧪 tests
-    strategy:
-      matrix:
-        # os: [ubuntu-latest, windows-latest]
-        os: [ubuntu-latest]
-    runs-on: ${{ matrix.os }}
+    name: 🧪 Tests
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Install Neovim
@@ -29,7 +24,7 @@ jobs:
           nvim --headless -u tests/init.lua -c "PlenaryBustedDirectory tests/ {minimal_init = 'tests/init.lua', sequential = true}"
   style:
     needs: tests
-    name: 💅 styles
+    name: 💅 Styles
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
