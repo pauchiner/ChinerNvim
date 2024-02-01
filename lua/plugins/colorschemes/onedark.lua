@@ -72,6 +72,7 @@ return  {
         ["CmpItemKindUnit"] = { bg='NONE', fg='#D4D4D4' },
 
         --- Lazy ---
+        ["LazyNormal"] = {bg = "$bg0"},
         ["LazyH1"] = {fg = "$bg0", bg = "$purple"},
         ["LazyNoCond"] = {fg = "$grey"},
         ["LazySpecial"] = {fg = "$purple"},

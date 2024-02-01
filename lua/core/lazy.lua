@@ -14,7 +14,7 @@ vim.opt.runtimepath:prepend(lazypath)
 require("lazy").setup("plugins", {
   defaults = { lazy = true },
   checker = { enabled = true },
-  change_detection = { enabled = false },
+  change_detection = { enabled = true, notify = true },
   install = { colorscheme = { ChinerNvim.colorscheme } },
   performance = {
     rtp = {
@@ -29,7 +29,8 @@ require("lazy").setup("plugins", {
     },
   },
   ui = {
-    border = "rounded",
+    size = {width = 1, height = 1},
+    border = "none",
     title = "Plugins",
     icons = {
       lazy = " ",
@@ -44,3 +45,7 @@ require("lazy").setup("plugins", {
     }
   }
 })
+
+vim.api.nvim_create_user_command('Plugins', function ()
+ vim.api.nvim_command [[Lazy]]
+end, {})
