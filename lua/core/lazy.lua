@@ -29,7 +29,7 @@ require("lazy").setup("plugins", {
     },
   },
   ui = {
-    size = {width = 1, height = 1},
+    size = { width = 1, height = 1 },
     border = "none",
     title = "Plugins",
     icons = {
@@ -42,10 +42,10 @@ require("lazy").setup("plugins", {
         "★",
         "‒",
       },
-    }
-  }
+    },
+  },
 })
 
-vim.api.nvim_create_user_command('Plugins', function ()
- vim.api.nvim_command [[Lazy]]
+vim.api.nvim_create_user_command("Plugins", function()
+  vim.api.nvim_command([[Lazy]])
 end, {})

@@ -5,9 +5,9 @@ return {
     name = "MarkdownPreview",
     event = { "BufReadPre *.md", "BufNewFile *.md" },
     build = "cd app && yarn install",
-    config = function ()
+    config = function()
       local opts = {
-        mkdp_page_title = "${name}"
+        mkdp_page_title = "${name}",
       }
 
       for k, v in pairs(opts) do
@@ -15,16 +15,16 @@ return {
       end
 
       --- Autocommand to show to the user that can preview the markdown file
-      vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+      vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
         pattern = "*.md",
-        callback = function ()
+        callback = function()
           vim.notify("run :MarkdownPreview to start the live preview of the file.", "info", {
             title = "Markdown",
             timeout = 300,
-            icon = ""
+            icon = "",
           })
-        end
+        end,
       })
-    end
-  }
+    end,
+  },
 }

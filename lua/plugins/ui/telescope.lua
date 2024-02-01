@@ -5,50 +5,50 @@ return {
   dependencies = {
     {
       "nvim-lua/plenary.nvim",
-      name = "Plenary"
-    }
+      name = "Plenary",
+    },
   },
   config = function()
-    local actions = require('telescope.actions')
+    local actions = require("telescope.actions")
 
-    require("telescope").setup {
+    require("telescope").setup({
       defaults = {
         vimgrep_arguments = {
-          'rg',
-          '--color=never',
-          '--no-heading',
-          '--with-filename',
-          '--line-number',
-          '--column',
-          '--smart-case',
+          "rg",
+          "--color=never",
+          "--no-heading",
+          "--with-filename",
+          "--line-number",
+          "--column",
+          "--smart-case",
         },
         file_ignore_patterns = {
-          'yarn%.lock',
-          'gemfile%.lock',
-          'package%-lock%.json',
-          'pnpm%-lock%.yaml',
-          'node_modules',
-          'deno%.lock',
-          '%.git/.*',
-          '%.glb',
-          '%.svg',
-          '%.png',
-          '%.jpeg',
-          '%.jpg',
-          '%.ico',
-          '%.webp',
-          '%.avif',
-          '%.heic',
-          '%.mp3',
-          '%.mp4',
-          '%.mkv',
-          '%.mov',
-          '%.wav',
-          '%.flv',
-          '%.avi',
-          '%.webm',
-          '.env.*',
-          '%.db',
+          "yarn%.lock",
+          "gemfile%.lock",
+          "package%-lock%.json",
+          "pnpm%-lock%.yaml",
+          "node_modules",
+          "deno%.lock",
+          "%.git/.*",
+          "%.glb",
+          "%.svg",
+          "%.png",
+          "%.jpeg",
+          "%.jpg",
+          "%.ico",
+          "%.webp",
+          "%.avif",
+          "%.heic",
+          "%.mp3",
+          "%.mp4",
+          "%.mkv",
+          "%.mov",
+          "%.wav",
+          "%.flv",
+          "%.avi",
+          "%.webm",
+          ".env.*",
+          "%.db",
         },
         mappings = {
           i = {
@@ -57,9 +57,9 @@ return {
             ["<C-k>"] = actions.move_selection_previous,
             ["<ESC>"] = actions.close,
           },
-        }
+        },
       },
-      layout_strategy = 'flex',
+      layout_strategy = "flex",
       prompt_prefix = "  ",
       git_icons = {
         added = "",
@@ -71,7 +71,7 @@ return {
         untracked = "?",
       },
       layout_config = {
-        prompt_position = 'top',
+        prompt_position = "top",
         horizontal = {
           mirror = true,
           preview_cutoff = 100,
@@ -87,6 +87,6 @@ return {
         height = 0.94,
         width = 0.86,
       },
-    }
+    })
   end,
 }

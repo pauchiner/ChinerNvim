@@ -1,11 +1,13 @@
-return  {
+return {
   "navarasu/onedark.nvim",
   name = "Colorscheme",
   lazy = false,
   priority = 1000,
   config = function()
     local status, theme = pcall(require, "onedark")
-    if (not status) then return end
+    if not status then
+      return
+    end
 
     theme.setup({
       term_colors = true,
@@ -25,71 +27,70 @@ return  {
       },
       highlights = {
         --- Code ---
-        ["@tag.attribute"] = {fg = '$orange', fmt = 'italic'},
-        ["@tag.delimiter"] = {fg = '$purple'},
-        ["@constructor"] = {fg = '$yellow', fmt = 'italic'},
+        ["@tag.attribute"] = { fg = "$orange", fmt = "italic" },
+        ["@tag.delimiter"] = { fg = "$purple" },
+        ["@constructor"] = { fg = "$yellow", fmt = "italic" },
 
         --- Lsp Saga ---
-        ["DiagnosticNormal"] = {fg ="$fg", bg = "$bg0"},
-        ["HoverNormal"] = {fg ="$fg", bg = "$bg0"},
-        ["HoverBorder"] = {fg ="$purple", bg = "$bg0"},
-        ["RenameNormal"] = {fg ="$fg", bg = "$bg0"},
-        ["RenameBorder"] = {fg ="$purple", bg = "$bg0"},
-        ["SagaNormal"] = {fg ="$fg", bg = "$bg0"},
-        ["SagaBorder"] = {fg ="$purple", bg = "$bg0"},
+        ["DiagnosticNormal"] = { fg = "$fg", bg = "$bg0" },
+        ["HoverNormal"] = { fg = "$fg", bg = "$bg0" },
+        ["HoverBorder"] = { fg = "$purple", bg = "$bg0" },
+        ["RenameNormal"] = { fg = "$fg", bg = "$bg0" },
+        ["RenameBorder"] = { fg = "$purple", bg = "$bg0" },
+        ["SagaNormal"] = { fg = "$fg", bg = "$bg0" },
+        ["SagaBorder"] = { fg = "$purple", bg = "$bg0" },
 
         --- Messages ---
-        ["InfoMsg"] = {fg = "$blue", fmt = "bold"},
-        ["DoneMsg"] = {fg = "$green", fmt = "bold"},
-        ["ErrorMsg"] = {fg = "$red", fmt = "bold"},
-        ["ContentMsg"] = {fg = "$fg", fmt = "italic"},
+        ["InfoMsg"] = { fg = "$blue", fmt = "bold" },
+        ["DoneMsg"] = { fg = "$green", fmt = "bold" },
+        ["ErrorMsg"] = { fg = "$red", fmt = "bold" },
+        ["ContentMsg"] = { fg = "$fg", fmt = "italic" },
 
         --- Fold Column ---
-        ["FoldColumn"] = { fg = "$grey", bg = '$bg0'},
+        ["FoldColumn"] = { fg = "$grey", bg = "$bg0" },
 
         --- Tree ---
-        ["NvimTreeRootFolder"] = { fg = "$purple"},
-        ["NvimTreeIndentMarker"] = { fg = "$grey"},
-        ["NvimTreeFolderArrowClosed"] = { fg = "$grey"},
+        ["NvimTreeRootFolder"] = { fg = "$purple" },
+        ["NvimTreeIndentMarker"] = { fg = "$grey" },
+        ["NvimTreeFolderArrowClosed"] = { fg = "$grey" },
 
         --- Folders ---
-        ["NvimTreeFolderName"] = { fg = "#cccccc"},
-        ["NvimTreeEmptyFolderName"] = { fg = "#cccccc"},
-        ["NvimTreeOpenedFolderName"] = { fg = "#b78fda", fmt = 'bold'},
-        ["NvimTreeFolderIcon"] = { fg = "#b78fda"},
+        ["NvimTreeFolderName"] = { fg = "#cccccc" },
+        ["NvimTreeEmptyFolderName"] = { fg = "#cccccc" },
+        ["NvimTreeOpenedFolderName"] = { fg = "#b78fda", fmt = "bold" },
+        ["NvimTreeFolderIcon"] = { fg = "#b78fda" },
 
         --- Cmp ---
-        ["CmpItemAbbrDeprecated"] = { bg="NONE", fg= "#808080", fmt="strikethrough" },
-        ["CmpItemAbbrMatch"] = { bg="NONE", fg='$purple' },
-        ["CmpItemAbbrMatchFuzzy"] = { bg="NONE", fg="$fg"},
-        ["CmpItemKindVariable"] = { bg="NONE", fg='$cyan' },
-        ["CmpItemKindInterface"] = { bg="NONE", fg='$cyan' },
-        ["CmpItemKindText"] = { bg="NONE", fg='$cyan' },
-        ["CmpItemKindFunction"] = { bg='NONE', fg='$purple' },
-        ["CmpItemKindMethod"] = { bg='NONE', fg='$purple' },
-        ["CmpItemKindKeyword"] = { bg='NONE', fg='#D4D4D4' },
-        ["CmpItemKindProperty"] = { bg='NONE', fg='#D4D4D4' },
-        ["CmpItemKindUnit"] = { bg='NONE', fg='#D4D4D4' },
+        ["CmpItemAbbrDeprecated"] = { bg = "NONE", fg = "#808080", fmt = "strikethrough" },
+        ["CmpItemAbbrMatch"] = { bg = "NONE", fg = "$purple" },
+        ["CmpItemAbbrMatchFuzzy"] = { bg = "NONE", fg = "$fg" },
+        ["CmpItemKindVariable"] = { bg = "NONE", fg = "$cyan" },
+        ["CmpItemKindInterface"] = { bg = "NONE", fg = "$cyan" },
+        ["CmpItemKindText"] = { bg = "NONE", fg = "$cyan" },
+        ["CmpItemKindFunction"] = { bg = "NONE", fg = "$purple" },
+        ["CmpItemKindMethod"] = { bg = "NONE", fg = "$purple" },
+        ["CmpItemKindKeyword"] = { bg = "NONE", fg = "#D4D4D4" },
+        ["CmpItemKindProperty"] = { bg = "NONE", fg = "#D4D4D4" },
+        ["CmpItemKindUnit"] = { bg = "NONE", fg = "#D4D4D4" },
 
         --- Lazy ---
-        ["LazyNormal"] = {bg = "$bg0"},
-        ["LazyH1"] = {fg = "$bg0", bg = "$purple"},
-        ["LazyNoCond"] = {fg = "$grey"},
-        ["LazySpecial"] = {fg = "$purple"},
+        ["LazyNormal"] = { bg = "$bg0" },
+        ["LazyH1"] = { fg = "$bg0", bg = "$purple" },
+        ["LazyNoCond"] = { fg = "$grey" },
+        ["LazySpecial"] = { fg = "$purple" },
 
         --- Mason ---
-        ["MasonNormal"] = {bg = "$bg0"},
-        ["MasonHeader"] = {fg = "$bg0", bg = "$purple"},
-        ["MasonHighlight"] = {fg = "$purple"},
-        ["MasonHighlightBlockBold"] = {fg = "$bg0", bg = "$purple"},
-        ["MasonHighlightBlock"] = {fg = "$purple", bg = "$purple"},
+        ["MasonNormal"] = { bg = "$bg0" },
+        ["MasonHeader"] = { fg = "$bg0", bg = "$purple" },
+        ["MasonHighlight"] = { fg = "$purple" },
+        ["MasonHighlightBlockBold"] = { fg = "$bg0", bg = "$purple" },
+        ["MasonHighlightBlock"] = { fg = "$purple", bg = "$purple" },
 
         --- Package Info ---
-        ["PackageInfoOutdatedVersion"] = {fg = '$grey', fmt = 'italic'},
-
-      }
+        ["PackageInfoOutdatedVersion"] = { fg = "$grey", fmt = "italic" },
+      },
     })
 
     theme.load()
-  end
+  end,
 }

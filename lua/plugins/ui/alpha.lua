@@ -14,13 +14,13 @@ local logo = [[
 ]]
 
 return {
-  'goolord/alpha-nvim',
+  "goolord/alpha-nvim",
   name = "Alpha",
-  event = 'VimEnter',
+  event = "VimEnter",
   opts = function()
-    local dashboard = require('alpha.themes.dashboard')
+    local dashboard = require("alpha.themes.dashboard")
 
-		dashboard.section.header.val = vim.split(logo, "\n")
+    dashboard.section.header.val = vim.split(logo, "\n")
     dashboard.section.header.opts.hl = "Special"
 
     dashboard.section.buttons.val = {
@@ -36,7 +36,7 @@ return {
   config = function(_, dashboard)
     require("alpha").setup(dashboard.opts)
 
---[[
+    --[[
     vim.api.nvim_create_autocmd("User", {
       callback = function()
         local stats = require("lazy").stats()
@@ -45,6 +45,6 @@ return {
         pcall(vim.cmd.AlphaRedraw)
       end,
     })
-]] 
+]]
   end,
 }

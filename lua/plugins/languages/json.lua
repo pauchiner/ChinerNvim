@@ -7,12 +7,12 @@ return {
     opts = {
       icons = {
         style = {
-            outdated = "󰳡 ",
+          outdated = "󰳡 ",
         },
       },
       hide_up_to_date = true,
       hide_unstable_versions = true,
-      package_manager = 'yarn'
-    }
-  }
+      package_manager = "yarn",
+    },
+  },
 }

@@ -1,15 +1,15 @@
 return {
-  'folke/noice.nvim',
+  "folke/noice.nvim",
   name = "Noice",
-  event = 'VeryLazy',
+  event = "VeryLazy",
   dependencies = {
     {
       "MunifTanjim/nui.nvim",
-      name = "Nui"
-    }
+      name = "Nui",
+    },
   },
-  config = function ()
-    require('noice').setup({
+  config = function()
+    require("noice").setup({
       cmdline = {
         view = "cmdline",
         format = {
@@ -139,20 +139,19 @@ return {
         lsp_doc_border = false, -- add a border to hover docs and signature help
       },
 
-
       views = {},
 
       routes = {
         {
           view = "notify",
           filter = { event = "msg_showmode" },
-          opts = { skip = true }
-        }
+          opts = { skip = true },
+        },
       },
 
       status = {},
 
       format = {},
     })
-  end
+  end,
 }

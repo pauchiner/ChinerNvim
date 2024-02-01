@@ -4,6 +4,6 @@ return {
   event = "VeryLazy",
   opts = {
     fps = 60,
-    render = "default"
-  }
+    render = "default",
+  },
 }

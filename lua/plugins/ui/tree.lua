@@ -19,7 +19,7 @@ return {
 
       indent_markers = {
         enable = ChinerNvim.editor.file_explorer.indent_markers,
-        icons = { corner = "╰", }
+        icons = { corner = "╰" },
       },
 
       icons = {
@@ -41,8 +41,8 @@ return {
             default = "󰉋 ",
             open = "󰝰 ",
             empty = "󰉖 ",
-            empty_open = "󰷏 "
-          }
+            empty_open = "󰷏 ",
+          },
         },
         diagnostics_placement = "before",
         git_placement = "after",
@@ -56,7 +56,7 @@ return {
         info = "",
         warning = "",
         error = "",
-      }
+      },
     },
-  }
+  },
 }

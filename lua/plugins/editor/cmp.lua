@@ -4,34 +4,40 @@ return {
   dependencies = {
     {
       name = "Lspkind",
-      "onsails/lspkind-nvim"
+      "onsails/lspkind-nvim",
     },
     {
       name = "Cmp-Lua",
-      "hrsh7th/cmp-nvim-lua"
+      "hrsh7th/cmp-nvim-lua",
     },
     {
       name = "Cmp-Lsp",
-      "hrsh7th/cmp-nvim-lsp"
+      "hrsh7th/cmp-nvim-lsp",
     },
     {
       name = "Cmp-Buffer",
-      "hrsh7th/cmp-buffer"
+      "hrsh7th/cmp-buffer",
     },
     {
       name = "Snippets",
-      "L3MON4D3/LuaSnip"
-    }
+      "L3MON4D3/LuaSnip",
+    },
   },
   config = function()
     local cmp_status_ok, cmp = pcall(require, "cmp")
-    if (not cmp_status_ok) then return end
+    if not cmp_status_ok then
+      return
+    end
 
-    local lspkind_status_ok, lspkind = pcall(require, 'lspkind')
-    if (not lspkind_status_ok) then return end
+    local lspkind_status_ok, lspkind = pcall(require, "lspkind")
+    if not lspkind_status_ok then
+      return
+    end
 
-    local luasnip_status_ok, luasnip = pcall(require, 'luasnip')
-    if (not luasnip_status_ok) then return end
+    local luasnip_status_ok, luasnip = pcall(require, "luasnip")
+    if not luasnip_status_ok then
+      return
+    end
 
     local has_words_before = function()
       unpack = unpack or table.unpack
@@ -50,8 +56,8 @@ return {
         ["<Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
             cmp.select_next_item()
-          -- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable() 
-          -- that way you will only jump inside the snippet region
+            -- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable()
+            -- that way you will only jump inside the snippet region
           elseif luasnip.expand_or_jumpable() then
             luasnip.expand_or_jump()
           elseif has_words_before() then
@@ -71,21 +77,21 @@ return {
           end
         end, { "i", "s" }),
 
-        ['<CR>'] = cmp.mapping.confirm({
+        ["<CR>"] = cmp.mapping.confirm({
           behavior = cmp.ConfirmBehavior.Replace,
-          select = true
+          select = true,
         }),
       }),
 
       sources = cmp.config.sources({
-        { name = 'nvim_lsp', priority = 10 },
-        { name = 'buffer', priority = 7 },
-        { name = 'path', priority = 4},
+        { name = "nvim_lsp", priority = 10 },
+        { name = "buffer", priority = 7 },
+        { name = "path", priority = 4 },
       }),
 
       formatting = {
-        format = lspkind.cmp_format({ mode = "symbol", preset="codicons" })
-      }
+        format = lspkind.cmp_format({ mode = "symbol", preset = "codicons" }),
+      },
     })
   end,
 }

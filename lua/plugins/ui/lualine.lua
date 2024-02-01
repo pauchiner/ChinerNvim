@@ -1,6 +1,8 @@
-local package_status = function ()
-  local package_info_status, package = pcall(require, 'package-info')
-  if (not package_info_status) then return end
+local package_status = function()
+  local package_info_status, package = pcall(require, "package-info")
+  if not package_info_status then
+    return
+  end
 
   return package.get_status()
 end
@@ -14,44 +16,44 @@ return {
     options = {
       icons_enabled = true,
       theme = "palenight",
-      component_separators = '|',
-      section_separators = { left = '', right = '' },
+      component_separators = "|",
+      section_separators = { left = "", right = "" },
       globalstatus = true,
     },
     sections = {
-      lualine_a = { 'mode' },
-      lualine_b = { 'branch' },
+      lualine_a = { "mode" },
+      lualine_b = { "branch" },
       lualine_c = {
         {
-          'diff',
+          "diff",
           colored = true,
           diff_color = {
-            added    = { fg = "#28A745" },
+            added = { fg = "#28A745" },
             modified = { fg = "#DBAB09" },
-            removed  = { fg = "#D73A49" }
+            removed = { fg = "#D73A49" },
           },
           symbols = {
-            added    = " ",
+            added = " ",
             modified = " ",
-            removed  = " "
-          }
-        }
+            removed = " ",
+          },
+        },
       },
       lualine_d = { package_status },
 
       lualine_x = {
         {
-          'diagnostics',
+          "diagnostics",
           symbols = {
-            error = ' ',
-            warn = ' ',
-            info = ' ',
-            hint = ' '
-          }
+            error = " ",
+            warn = " ",
+            info = " ",
+            hint = " ",
+          },
         },
       },
-      lualine_y = { 'progress' },
-      lualine_z = { 'location' }
+      lualine_y = { "progress" },
+      lualine_z = { "location" },
     },
-  }
+  },
 }

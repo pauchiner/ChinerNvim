@@ -10,22 +10,20 @@ return {
     {
       name = "Cmp-Lsp",
       "hrsh7th/cmp-nvim-lsp",
-    }
+    },
   },
-  config = function ()
+  config = function()
     -- Virtual text
-    vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-      vim.lsp.diagnostic.on_publish_diagnostics, {
-        underline = true,
-        severity_sort = true,
-        update_in_insert = false,
-        virtual_text = ChinerNvim.editor.diagnostics.virtual_text and { spacing = 2, prefix = "" } or false,
-      }
-    )
+    vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+      underline = true,
+      severity_sort = true,
+      update_in_insert = false,
+      virtual_text = ChinerNvim.editor.diagnostics.virtual_text and { spacing = 2, prefix = "" } or false,
+    })
 
     -- Gutter
     local signs = ChinerNvim.editor.diagnostics.gutter
-      and { Error = " ", Warn = " ", Hint = "󰌶 ", Info = " " }
+        and { Error = " ", Warn = " ", Hint = "󰌶 ", Info = " " }
       or { Error = "", Warn = "", Hint = "", Info = "" }
 
     for type, icon in pairs(signs) do

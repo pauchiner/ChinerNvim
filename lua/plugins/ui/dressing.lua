@@ -1,5 +1,5 @@
 return {
   "stevearc/dressing.nvim",
-  ft ="NvimTree",
+  ft = "NvimTree",
   name = "Dressing",
 }

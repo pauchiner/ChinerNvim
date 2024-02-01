@@ -5,11 +5,11 @@ return {
   dependencies = {
     {
       name = "Autotag",
-      'windwp/nvim-ts-autotag',
-    }
+      "windwp/nvim-ts-autotag",
+    },
   },
   config = function()
-    require("nvim-treesitter.configs").setup {
+    require("nvim-treesitter.configs").setup({
       ensure_installed = {
         "bash",
         "regex",
@@ -34,11 +34,11 @@ return {
         enable = true,
       },
       indent = {
-        enable = true
+        enable = true,
       },
       autotag = {
-        enable = true
-      }
-    }
+        enable = true,
+      },
+    })
   end,
 }

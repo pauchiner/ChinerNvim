@@ -7,50 +7,50 @@ return {
       [".prettierrc.cjs"] = {
         icon = "󰉨",
         color = "#ff5454",
-        name = "prettier"
+        name = "prettier",
       },
       [".prettierrc.json"] = {
         icon = "󰉨",
         color = "#ff5454",
-        name = "prettier"
+        name = "prettier",
       },
       [".eslintrc.cjs"] = {
         icon = "󰱺",
         color = "#5b34eb",
-        name = "eslint"
+        name = "eslint",
       },
       [".eslintrc.json"] = {
         icon = "󰱺",
         color = "#5b34eb",
-        name = "eslint"
+        name = "eslint",
       },
       ["tsconfig.json"] = {
         icon = "󰛦",
         color = "#3478C0",
-        name = "typescript"
+        name = "typescript",
       },
       ["astro.config.mjs"] = {
         icon = "",
         color = "#EF8547",
-        name = "astro"
+        name = "astro",
       },
       ["yarn.lock"] = {
         icon = "",
         color = "#2c8ebb",
-        name = "yarn"
+        name = "yarn",
       },
     },
     override_by_extension = {
       ["d.ts"] = {
         icon = "",
         color = "#48A049",
-        name = "typescript"
+        name = "typescript",
       },
       astro = {
         icon = "",
         color = "#EF8547",
-        name = "astro"
+        name = "astro",
       },
-    }
-  }
+    },
+  },
 }

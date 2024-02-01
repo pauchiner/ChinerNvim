@@ -14,8 +14,8 @@ return {
         auto_trigger = true,
         enabled = true,
         keymap = {
-          accept = "<S-l>"
-        }
+          accept = "<S-l>",
+        },
       },
     })
 
@@ -33,6 +33,5 @@ return {
         vim.b.copilot_suggestion_hidden = false
       end)
     end
-
-  end
+  end,
 }

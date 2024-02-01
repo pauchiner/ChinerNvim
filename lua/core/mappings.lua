@@ -3,42 +3,48 @@ local silent = { silent = true }
 local saga = { noremap = true, silent = true }
 
 --- Increment/decrement
-keymap('n', '+', '<C-a>', silent)
-keymap('n', '-', '<C-x>', silent)
+keymap("n", "+", "<C-a>", silent)
+keymap("n", "-", "<C-x>", silent)
 
 --- Delete a word backwards
-keymap('n', 'dw', 'vb"_d', silent)
+keymap("n", "dw", 'vb"_d', silent)
 
 --- Clear highlights
-keymap('n', '<Esc>', '<cmd>noh<CR>', silent)
+keymap("n", "<Esc>", "<cmd>noh<CR>", silent)
 
 --- Split window
-keymap('n', 'ss', ':split<Return><C-w>w', silent)
-keymap('n', 'sv', ':vsplit<Return><C-w>w', silent)
+keymap("n", "ss", ":split<Return><C-w>w", silent)
+keymap("n", "sv", ":vsplit<Return><C-w>w", silent)
 
 --- Move window
-keymap('n', '<Space>', '<C-w>w', silent)
-keymap('', '<C-h>', '<C-w>h', silent)
-keymap('', '<C-k>', '<C-w>k', silent)
-keymap('', '<C-j>', '<C-w>j', silent)
-keymap('', '<C-l>', '<C-w>l', silent)
+keymap("n", "<Space>", "<C-w>w", silent)
+keymap("", "<C-h>", "<C-w>h", silent)
+keymap("", "<C-k>", "<C-w>k", silent)
+keymap("", "<C-j>", "<C-w>j", silent)
+keymap("", "<C-l>", "<C-w>l", silent)
 
 --- Resize window
-keymap('n', '<C-w><left>', '<C-w><', silent)
-keymap('n', '<C-w><right>', '<C-w>>', silent)
-keymap('n', '<C-w><up>', '<C-w>+', silent)
-keymap('n', '<C-w><down>', '<C-w>-', silent)
+keymap("n", "<C-w><left>", "<C-w><", silent)
+keymap("n", "<C-w><right>", "<C-w>>", silent)
+keymap("n", "<C-w><up>", "<C-w>+", silent)
+keymap("n", "<C-w><down>", "<C-w>-", silent)
 
 --- Tree
-keymap('n', ';l', "<cmd> NvimTreeToggle<CR>", silent)
+keymap("n", ";l", "<cmd> NvimTreeToggle<CR>", silent)
 
 --- Bufferline
-keymap('n', '<S-Tab>', function () require('bufferline').cycle(-1) end, silent)
-keymap('n', '<Tab>', function () require('bufferline').cycle(1) end, silent)
-keymap('n', ';x', "<cmd>bd<CR>", silent)
+keymap("n", "<S-Tab>", function()
+  require("bufferline").cycle(-1)
+end, silent)
+keymap("n", "<Tab>", function()
+  require("bufferline").cycle(1)
+end, silent)
+keymap("n", ";x", "<cmd>bd<CR>", silent)
 
 --- Lsp Saga
-keymap('n', 'K', function () require('lspsaga.hover'):render_hover_doc() end, silent)
+keymap("n", "K", function()
+  require("lspsaga.hover"):render_hover_doc()
+end, silent)
 keymap("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>", silent)
 keymap("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", silent)
 keymap("n", "gp", "<Cmd>Lspsaga peek_definition<CR>", saga)
