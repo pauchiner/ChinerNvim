@@ -4,6 +4,16 @@ return {
   main = "nvim-web-devicons",
   opts = {
     override_by_filename = {
+      ["stylua.toml"] = {
+        icon = "󰉨",
+        color = "#4287f5",
+        name = "stylua",
+      },
+      [".stylua.toml"] = {
+        icon = "󰉨",
+        color = "#4287f5",
+        name = "stylua",
+      },
       [".prettierrc.cjs"] = {
         icon = "󰉨",
         color = "#ff5454",
