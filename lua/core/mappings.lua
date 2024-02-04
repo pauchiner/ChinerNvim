@@ -1,4 +1,4 @@
-local discipline = require('pauchiner.discipline')
+local discipline = require("pauchiner.discipline")
 discipline.cowboy()
 
 local keymap = vim.keymap.set
