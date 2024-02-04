@@ -17,72 +17,8 @@ return {
       show_close_icon = false,
     },
     highlights = {
-      indicator_selected = {
-        fg = "#b78fda",
-        bg = "#2a2c3d",
-      },
       background = {
         fg = "#657b83",
-        bg = "#2a2c3d",
-      },
-      buffer_visible = {
-        bg = "#2a2c3d",
-      },
-      buffer_selected = {
-        fg = "#b78fda",
-        bg = "#2a2c3d",
-        italic = false,
-        bold = false,
-      },
-      duplicate = {
-        bg = "#2a2c3d",
-      },
-      separator = {
-        fg = "#2a2c3d",
-        bg = "#2a2c3d",
-      },
-      hint = {
-        bg = "#2a2c3d",
-      },
-      hint_diagnostic = {
-        fg = "#ff92df",
-        bg = "#2a2c3d",
-      },
-      error = {
-        bg = "#2a2c3d",
-      },
-      error_diagnostic = {
-        fg = "#ff5555",
-        bg = "#2a2c3d",
-      },
-      warning = {
-        bg = "#2a2c3d",
-      },
-      warning_diagnostic = {
-        fg = "#ffcb6b",
-        bg = "#2a2c3d",
-      },
-      info = {
-        bg = "#2a2c3d",
-      },
-      info_diagnostic = {
-        fg = "#8be9fd",
-        bg = "#2a2c3d",
-      },
-      modified = {
-        fg = "#b78fda",
-        bg = "#2a2c3d",
-      },
-      modified_visible = {
-        fg = "#b78fda",
-        bg = "#2a2c3d",
-      },
-      modified_selected = {
-        fg = "#b78fda",
-        bg = "#2a2c3d",
-      },
-      fill = {
-        fg = "#2a2c3d",
         bg = "#2a2c3d",
       },
     },
