@@ -56,7 +56,11 @@ for k, v in pairs(globals) do
   vim.g[k] = v
 end
 
--- hide default statusline and ruler in dashboard
+--- Enable undercurl
+vim.cmd [[let &t_Cs = "\e[4:3m]"]]
+vim.cmd [[let &t_Ce = "\e[4:0m]"]]
+
+--- hide default statusline and ruler in dashboard
 vim.cmd([[autocmd FileType alpha set laststatus=0]])
 vim.cmd([[autocmd FileType alpha set noruler]])
 
