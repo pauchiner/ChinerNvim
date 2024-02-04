@@ -22,14 +22,31 @@ jobs:
           nvim --version
           [ ! -d tests ] && exit 0
           nvim --headless -u tests/init.lua -c "PlenaryBustedDirectory tests/ {minimal_init = 'tests/init.lua', sequential = true}"
-  style:
-    needs: tests
+  styles:
     name: 💅 Styles
+    needs: tests
+    if: always()
     runs-on: ubuntu-20.04
+
+    permissions:
+      contents: write
+
     steps:
-      - uses: actions/checkout@v2
-      - uses: JohnnyMorganz/stylua-action@v3.0.0
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Format code
+        uses: JohnnyMorganz/stylua-action@v3.0.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          args: --check lua/
           version: latest
+          args: lua/
+
+
+      - name: Push changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "styles: auto-format with stylua"
+          commit_user_name: "github-actions[bot]"
+          commit_user_email: "github-actions[bot]@users.noreply.github.com"
+          commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
