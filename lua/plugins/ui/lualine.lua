@@ -15,7 +15,6 @@ return {
   opts = {
     options = {
       icons_enabled = true,
-      theme = "palenight",
       component_separators = "|",
       section_separators = { left = "", right = "" },
       globalstatus = true,
