@@ -1,6 +1,6 @@
 ChinerNvim = {
   editor = {
-    colorscheme = "onedark",
+    colorscheme = "pastelnight",
 
     identation = {
       lines = true, --- Displays identation lines in the code.
