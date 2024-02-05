@@ -9,7 +9,7 @@ return {
     },
 
     notify = {
-      threshold = vim.log.levels.ERROR
+      threshold = vim.log.levels.ERROR,
     },
 
     renderer = {

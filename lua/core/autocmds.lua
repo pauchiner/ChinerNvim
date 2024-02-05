@@ -45,18 +45,18 @@ vim.api.nvim_create_autocmd("FileType", {
 --- hide default statusline and ruler in dashboard
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "alpha, dashboard",
-  callback = function ()
+  callback = function()
     vim.opt.laststatus = 0
     vim.opt.ruler = false
-  end
+  end,
 })
 
 --- Open help docs in vertical split
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "help",
-  callback = function ()
-   vim.cmd.wincmd [[H]]
-  end
+  callback = function()
+    vim.cmd.wincmd([[H]])
+  end,
 })
 
 --- Enable undercurl
