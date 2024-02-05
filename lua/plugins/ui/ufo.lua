@@ -5,29 +5,29 @@ return {
   event = { "BufReadPost", "BufNewFile" },
   dependencies = {
     { "kevinhwang91/promise-async", name = "PromiseAsync" },
-    { "luukvbaal/statuscol.nvim",   name = "StatusColumn" }
+    { "luukvbaal/statuscol.nvim", name = "StatusColumn" },
   },
   config = function()
     --- Set folding.
-    require('ufo').setup({
+    require("ufo").setup({
       provider_selector = function()
         return { "treesitter", "indent" }
       end,
     })
 
     --- Set statuscolumn style.
-    local builtin = require('statuscol.builtin')
+    local builtin = require("statuscol.builtin")
 
-    require('statuscol').setup({
+    require("statuscol").setup({
       relculright = true,
       segments = {
         {
           click = "v:lua.ScSa",
-          text = { "%s" }
+          text = { "%s" },
         },
         {
           text = { builtin.lnumfunc, " " },
-          click = "v:lua.ScLa"
+          click = "v:lua.ScLa",
         },
         {
           text = { builtin.foldfunc },
@@ -36,8 +36,8 @@ return {
         {
           text = { " ", " " },
           condition = { true },
-        }
-      }
+        },
+      },
     })
     vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
   end,
