@@ -8,6 +8,10 @@ return {
       side = ChinerNvim.editor.file_explorer.side,
     },
 
+    notify = {
+      threshold = vim.log.levels.ERROR
+    },
+
     renderer = {
       root_folder_label = function(path)
         return vim.fn.fnamemodify(path, ":t")
