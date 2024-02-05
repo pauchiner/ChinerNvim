@@ -5,15 +5,40 @@ return {
   event = { "BufReadPost", "BufNewFile" },
   dependencies = {
     { "kevinhwang91/promise-async", name = "PromiseAsync" },
-  },
-  opts = {
-    provider_selector = function()
-      return { "treesitter", "indent" }
-    end,
+    { "luukvbaal/statuscol.nvim",   name = "StatusColumn" }
   },
   config = function()
-    --- Displays correct folding markers
-    vim.opt.statuscolumn =
-      [[%s%=%l %#FoldColumn#%{foldlevel(v:lnum) > foldlevel(v:lnum - 1)? foldclosed(v:lnum) == -1? "": "": foldlevel(v:lnum) == 0? " ": " "} ]]
+    --- Set folding.
+    require('ufo').setup({
+      provider_selector = function()
+        return { "treesitter", "indent" }
+      end,
+    })
+
+    --- Set statuscolumn style.
+    local builtin = require('statuscol.builtin')
+
+    require('statuscol').setup({
+      relculright = true,
+      segments = {
+        {
+          click = "v:lua.ScSa",
+          text = { "%s" }
+        },
+        {
+          text = { builtin.lnumfunc, " " },
+          click = "v:lua.ScLa"
+        },
+        {
+          text = { builtin.foldfunc },
+          click = "v:lua.ScFa",
+        },
+        {
+          text = { " ", " " },
+          condition = { true },
+        }
+      }
+    })
+    vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:]]
   end,
 }
