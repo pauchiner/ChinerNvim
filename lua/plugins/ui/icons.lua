@@ -14,6 +14,11 @@ return {
         color = "#4287f5",
         name = "stylua",
       },
+      [".prettierignore"] = {
+        icon = "󰉨",
+        color = "#ff5454",
+        name = "prettierignore",
+      },
       [".prettierrc.cjs"] = {
         icon = "󰉨",
         color = "#ff5454",
