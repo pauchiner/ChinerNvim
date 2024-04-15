@@ -68,7 +68,7 @@ return {
         icon = "",
         color = "#2c8ebb",
         name = "yarn",
-      }
+      },
     },
     override_by_extension = {
       ["d.ts"] = {
