@@ -15,17 +15,17 @@ return {
         name = "stylua",
       },
       [".prettierignore"] = {
-        icon = "󰉨",
+        icon = "",
         color = "#ff5454",
         name = "prettierignore",
       },
       [".prettierrc.cjs"] = {
-        icon = "󰉨",
+        icon = "",
         color = "#ff5454",
         name = "prettier",
       },
       [".prettierrc.json"] = {
-        icon = "󰉨",
+        icon = "",
         color = "#ff5454",
         name = "prettier",
       },
@@ -44,27 +44,37 @@ return {
         color = "#3478C0",
         name = "typescript",
       },
-      ["astro.config.mjs"] = {
-        icon = "",
+      ["astro.config.ts"] = {
+        icon = "",
         color = "#EF8547",
         name = "astro",
+      },
+      ["astro.config.mjs"] = {
+        icon = "",
+        color = "#EF8547",
+        name = "astro",
+      },
+      ["pnpm-lock.yaml"] = {
+        icon = "",
+        color = "#7d7d7d",
+        name = "pnpm",
+      },
+      ["vitest.config.ts"] = {
+        icon = "󰙨",
+        color = "#edb21c",
+        name = "vitest",
       },
       ["yarn.lock"] = {
         icon = "",
         color = "#2c8ebb",
         name = "yarn",
-      },
+      }
     },
     override_by_extension = {
       ["d.ts"] = {
         icon = "",
         color = "#48A049",
         name = "typescript",
-      },
-      astro = {
-        icon = "",
-        color = "#EF8547",
-        name = "astro",
       },
     },
   },
