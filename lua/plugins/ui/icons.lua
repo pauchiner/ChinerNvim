@@ -69,6 +69,31 @@ return {
         color = "#2c8ebb",
         name = "yarn",
       },
+      ["wrangler.toml"] = {
+        icon = "",
+        color = "#DC812D",
+        name = "wrangler",
+      },
+      ["drizzle.config.ts"] = {
+        icon = "󰆼",
+        color = "#D4F753",
+        name = "drizzle",
+      },
+      [".env.example"] = {
+        icon = "",
+        color = "#edb21c",
+        name = "env"
+      },
+      [".nvmrc"] = {
+        icon = "",
+        color = "#4feb34",
+        name = "node"
+      },
+      ["vercel.json"] = {
+        icon = "󰔶",
+        color = "#ffffff",
+        name = "vercel"
+      }
     },
     override_by_extension = {
       ["d.ts"] = {
