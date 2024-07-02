@@ -4,16 +4,6 @@ return {
   main = "nvim-web-devicons",
   opts = {
     override_by_filename = {
-      ["stylua.toml"] = {
-        icon = "󰉨",
-        color = "#4287f5",
-        name = "stylua",
-      },
-      [".stylua.toml"] = {
-        icon = "󰉨",
-        color = "#4287f5",
-        name = "stylua",
-      },
       [".prettierignore"] = {
         icon = "",
         color = "#ff5454",
@@ -83,11 +73,6 @@ return {
         icon = "",
         color = "#edb21c",
         name = "env"
-      },
-      [".nvmrc"] = {
-        icon = "",
-        color = "#4feb34",
-        name = "node"
       },
       ["vercel.json"] = {
         icon = "󰔶",
