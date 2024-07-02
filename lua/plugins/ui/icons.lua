@@ -72,13 +72,13 @@ return {
       [".env.example"] = {
         icon = "",
         color = "#edb21c",
-        name = "env"
+        name = "env",
       },
       ["vercel.json"] = {
         icon = "󰔶",
         color = "#ffffff",
-        name = "vercel"
-      }
+        name = "vercel",
+      },
     },
     override_by_extension = {
       ["d.ts"] = {
