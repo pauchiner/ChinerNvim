@@ -62,6 +62,7 @@ return {
 
         --- Linters
         "eslint_d",
+        "biome",
 
         --- Formatters
         "stylua",
