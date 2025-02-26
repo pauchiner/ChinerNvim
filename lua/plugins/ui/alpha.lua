@@ -7,7 +7,7 @@ local logo = [[
            {_:Y:.}_//
 ----------{_}^-'{_}----------
 
-
+          Everything.
 
 ]]
 
@@ -19,7 +19,6 @@ return {
     local dashboard = require("alpha.themes.dashboard")
 
     dashboard.section.header.val = vim.split(logo, "\n")
-    dashboard.section.header.opts.hl = "Special"
 
     dashboard.section.buttons.val = {
       dashboard.button("i", " " .. " New file", ":e [No Name] <CR>i"),
