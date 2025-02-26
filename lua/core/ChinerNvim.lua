@@ -62,7 +62,7 @@ ChinerNvim = {
 
     --- Allows to use project .prettierrc configs when formatting.
     prettier = {
-      enabled = true,
+      enabled = false,
     },
 
     --- Allows to use Ctrl-jkhl to move between neovim and tmux panels.
