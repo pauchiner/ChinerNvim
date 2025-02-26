@@ -11,16 +11,14 @@ return {
         local icon = level:match("error") and " " or " "
         return " " .. icon .. count
       end,
+      indicator = {
+        style = 'none'
+      },
       enforce_regular_tabs = false,
       separator_style = "thin",
+      show_tab_indicators = false,
       show_buffer_close_icons = false,
       show_close_icon = false,
-    },
-    highlights = {
-      background = {
-        fg = "#657b83",
-        bg = "#2a2c3d",
-      },
-    },
+    }
   },
 }
