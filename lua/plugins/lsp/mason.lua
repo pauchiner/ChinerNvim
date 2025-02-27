@@ -58,7 +58,7 @@ return {
         "astro",
         "cssls",
         "lua_ls",
-        "tsserver",
+        "typescript-language-server",
 
         --- Linters
         "eslint_d",
