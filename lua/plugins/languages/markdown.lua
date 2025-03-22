@@ -2,29 +2,19 @@ return {
   {
     "iamcco/markdown-preview.nvim",
     cond = ChinerNvim.plugins.markdown_preview.enabled,
+    ft = { "markdown" },
     name = "MarkdownPreview",
-    event = { "BufReadPre *.md", "BufNewFile *.md" },
-    build = "cd app && yarn install",
-    config = function()
-      local opts = {
-        mkdp_page_title = "${name}",
-      }
-
-      for k, v in pairs(opts) do
-        vim.g[k] = v
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    build = function(plugin)
+      if vim.fn.executable "npx" then
+        vim.cmd("!cd " .. plugin.dir .. " && cd app && npx --yes yarn install")
+      else
+        vim.cmd [[Lazy load markdown-preview.nvim]]
+        vim.fn["mkdp#util#install"]()
       end
-
-      --- Autocommand to show to the user that can preview the markdown file
-      vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-        pattern = "*.md",
-        callback = function()
-          vim.notify("run :MarkdownPreview to start the live preview of the file.", "info", {
-            title = "Markdown",
-            timeout = 300,
-            icon = "",
-          })
-        end,
-      })
+    end,
+    init = function()
+      if vim.fn.executable "npx" then vim.g.mkdp_filetypes = { "markdown" } end
     end,
   },
 }
